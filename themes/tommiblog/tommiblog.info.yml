@@ -7,6 +7,7 @@ core: 8.x
 
 libraries:
   - tommiblog/global-styling
+  - tommiblog/mobile-menu
 
 regions: 
   header: 'Header'

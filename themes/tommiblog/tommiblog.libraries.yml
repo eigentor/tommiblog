@@ -14,3 +14,13 @@ global-styling:
       css/layout.css: {}
       css/base.css: {}
       css/node.css: {}
+
+mobile-menu
+  version: VERSION
+  js:
+    js/tommiblog-custom.js: {}
+  dependencies:
+    dependencies:
+      - core/jquery
+      - core/jquery.once
+
