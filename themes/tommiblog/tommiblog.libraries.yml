@@ -15,12 +15,10 @@ global-styling:
       css/base.css: {}
       css/node.css: {}
 
-mobile-menu
+mobile-menu:
   version: VERSION
   js:
     js/tommiblog-custom.js: {}
-  dependencies:
-    dependencies:
-      - core/jquery
-      - core/jquery.once
-
+  depencencies:
+    - core/jquery
+    - core/jquery.once
