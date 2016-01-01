@@ -36,3 +36,7 @@ sites/simpletest
 # simpletest
 
 .idea/
+
+.sass-cache/
+*.sassc
+*.scssc

@@ -1,0 +1,127 @@
+@import "_variables-mixins.sass"
+
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+
+* 
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html, body 
+  margin: 0
+  padding: 0
+  height: 100%
+
+body 
+  color: $base-font-color
+  font-family: $font-family-main
+  font-size: $base-font-size
+  letter-spacing: 0.002em
+  line-height: $base-line-height
+
+/* Headlines */
+
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h4 a, h6 a
+  font-family: $font-family-headlines
+  font-weight: normal
+  color: $headline-color
+  letter-spacing: 0.01em
+  margin-top: 0 
+  margin-bottom: 0.5em
+  line-height: 1.3
+
+.name-and-slogan 
+  margin-top: 15px
+  .site-name, .site-name a
+    font-family: $font-family-sitetitle
+    font-weight: normal
+    @include x-rem(font-size, 3)
+    color: #ca0d0d
+    line-height: 1
+    margin-bottom: 0
+
+
+/*** Standard HTML Elements ***/
+
+a 
+  color: $link-color
+  text-decoration: none
+  &:hover 
+    color: $link-color
+
+/** Drupal-specific Elements **/
+code 
+  margin-bottom: 10px
+
+.submitted 
+  color: #999
+  font-family: $font-family-headlines-thin
+  @include x-rem(font-size, 0.83)
+  margin: 5px 0 9px
+
+/** Drupal-specific micro elements */
+
+a.feed-icon 
+  display: none
+
+ul.links.inline
+  li 
+    padding: 0 10px 0 0
+    @include x-rem(font-size, 0.83)
+
+p 
+  margin: 5px 0 12px
+
+input.form-text 
+  border: 1px solid #aaa
+  padding: 2px 5px
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- Phablet LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+body
+  +breakpoint($breakpoint-phablet)
+    .name-and-slogan
+      .site-name, .site-name a
+        @include x-rem(font-size, 4.5)
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+body
+  +breakpoint($breakpoint-desktop-with-ie-fallback)
+
+
+    /* Headlines */
+    h2 
+      @include x-rem(font-size, 1.9)
+
+    article 
+      h2 
+        margin-bottom: 2px
+
+    .name-and-slogan
+      .site-name, .site-name a
+        @include x-rem(font-size, 6)
+        margin-left: -5px
+
+    .imagefloatleft 
+      float: left
+      margin: 5px 15px 0 0
+
+    .imagefloatright 
+      float: right
+      margin: 5px 0 0 15px

@@ -1,0 +1,83 @@
+@import "_variables-mixins.sass"
+
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+$breakpoint-no-query-fallbacks: true
+
+.node
+  +legacy-pie-clearfix
+  .field-node--body 
+    +legacy-pie-clearfix
+    img 
+      max-width: 100%
+      height: auto
+  .field-node--field-image
+    img 
+      max-width: 100%
+      height: auto
+  .field-node--field-tags
+    margin-bottom: 20px
+    .field-item
+      display: inline-block 
+      a
+        color: #777
+        //display: inline-block
+        +x-rem(font-size, 0.75)
+        margin: 0 10px 0 0
+        padding: 2px 0.5em
+        //background: #ccc
+        border: 1px dotted #aaa
+        line-height: 1.3
+        &:hover 
+          color: $link-color
+          border: 1px dotted $link-color
+
+  .field-node--field-separator-dummy
+    height: 0
+    line-height: 0
+  iframe 
+    max-width: 100%
+
+.view-frontpage 
+  .views-row 
+    margin-bottom: 15px
+    padding-bottom: 20px
+    border-bottom: 1px dashed #bbb
+    ul.links.inline 
+      display: block
+      margin-top: -5px
+      margin-bottom: 0
+          
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+body
+  +breakpoint($breakpoint-desktop-with-ie-fallback, $no-query: '.lt-ie9')
+
+    .node 
+      +legacy-pie-clearfix
+      .submitted 
+        float: left
+      .field-node--field-tags 
+        float: right
+      .field-node--field-separator-dummy 
+        clear: both
+    .field-node--field-tags
+      margin-bottom: 5px
+      .field-item 
+        a
+          margin: 0 0 0 10px
+
+    .field-node--field-image 
+      clear: both
+      float: left
+      margin: 5px 15px 0 0

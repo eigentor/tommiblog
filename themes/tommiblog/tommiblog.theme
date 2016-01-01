@@ -1,0 +1,5 @@
+<?php
+
+function tommiblog_page_alter (&$page) {
+  $page['#attached']['library'][] = 'tommiblog/tommiblog';
+}

@@ -1,0 +1,16 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      font_face/vag_handwritten/vag-handwritten.css: {}
+      font_face/oswald/oswald.css: {}
+      font_face/fira_sans/fira-sans.css: {}
+      font_face/source_sans_pro/source-sans-pro.css: {}
+      font_face/colaborate/colaborate_light/colaborate-light.css: {}
+      font_face/colaborate/colaborate_thin/colaborate-thin.css: {}
+      font_face/colaborate/colaborate_regular/colaborate-regular.css: {}
+      font_face/maidenorange/maidenorange.css: {}
+      font_face/glyphicons/glyphicons.css: {}
+      css/layout.css: {}
+      css/base.css: {}
+      css/node.css: {}

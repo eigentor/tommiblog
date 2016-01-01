@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'glyphicons';
+    src: url('glyphicons-regular.eot');
+    src: url('glyphicons-regular.eot?#iefix') format('embedded-opentype'),
+         url('glyphicons-regular.eot.woff') format('woff'),
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,0 +1,67 @@
+@import "compass/css3"
+@import "compass/utilities/general/clearfix"
+@import "singularitygs"
+@import "rem-mixin"
+
+// Define Padding vor Desktop and mobile
+$desktop-grid-padding: 40px
+$smartphone-grid-padding: 20px
+
+// define Grid
+$grids: 12
+$gutter-width: 1/7
+
+@mixin container-mobile
+  max-width: 1006px
+  margin: 0 auto
+  padding-right: $smartphone-grid-padding
+  padding-left: $smartphone-grid-padding
+
+@mixin container-desktop
+  margin: 0 auto
+  max-width: auto 
+  width: 1006px
+  padding-left: $desktop-grid-padding 
+  padding-right: $desktop-grid-padding 
+
+// Breakpoints
+$breakpoint-desktop-with-ie-fallback: 960px
+$breakpoint-desktop-without-ie-fallback: 960px
+$breakpoint-tablet: 768px
+$breakpoint-phablet: 480px
+$breakpoint-small-smartphone: 240px
+
+//////////////////////////////////////
+
+// Colors
+$base-font-color: #444
+$headline-color: #555
+$link-color: #19a0d9
+$link-color: #E09900
+$link-color: #19a0d9
+$link-color: #ca2020
+$link-color: #dda231
+$link-color: #CA0D0D
+
+
+/////////////////////////////////////
+
+// Font Properties
+$base-font-size: 15px
+$base-line-height: 1.6
+
+// Font Families
+$font-family-main: source_sans_proregular,arial,helvetica,sans-serif
+$font-family-headlines: oswaldbook,arial,helvetica,sans-serif
+// $font-family-headlines: maiden_orangeregular,arial,helvetica,sans-serif
+$font-family-headlines-thin: oswaldlight,arial,helvetica,sans-serif
+$font-family-handwritten: vag-handwrittenregular,times,serif
+$font-family-sitetitle: maiden_orangeregular,times,serif
+
+
+///////////////////// Mixins //////////////////////
+
+
+
+
+
