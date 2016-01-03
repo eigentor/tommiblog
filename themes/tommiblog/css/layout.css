@@ -285,7 +285,7 @@ main {
 /*------------------------------------------- */
 @media (min-width: 480px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003193}}
-  body .l-container {
+  body .layout-container {
     position: relative;
     min-height: 100%;
   }
@@ -315,7 +315,7 @@ main {
     /* Footer */
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003218}}
-  body .l-container {
+  body .layout-container {
     padding-bottom: 90px;
     min-height: 100%;
   }
@@ -328,6 +328,14 @@ main {
     padding-right: 40px;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003223}}
+  body div[role="contentinfo"] {
+    margin: 0 auto;
+    max-width: auto;
+    width: 926px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003227}}
   body header {
     *zoom: 1;
   }
@@ -340,121 +348,121 @@ main {
     overflow: hidden;
     visibility: hidden;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003226}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003230}}
   body header .name-and-slogan {
     width: auto;
     float: left;
     margin-right: 35px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003234}}
   body header .region-header {
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003236}}
   body header .block {
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003238}}
   body header #block-tommiblog-search, body header #block-socialmediablockheader, body header #block-mainnavigation {
     display: block;
     clear: none;
     border: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003242}}
   body header #block-socialmediablockheader {
     margin-top: 25px;
     margin-right: 10px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003245}}
   body header #block-socialmediablockheader img {
     margin: 0 5px;
     width: auto;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003248}}
   body header #block-socialmediablockheader p {
     margin: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003250}}
   body header #block-socialmediablockheader span.rufzeichen {
     margin: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003252}}
   body header #block-mobilemenuswitcher {
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003254}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003258}}
   body header #block-mainnavigation ul.menu li {
     font-family: oswaldbook, arial, helvetica, sans-serif;
     font-size: 21.6px;
     font-size: 1.2rem;
     line-height: 1.3;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003258}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003262}}
   body header #block-mainnavigation ul.menu li a {
     color: #888888;
     background: none;
     border: none;
     padding: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003267}}
   body header #block-tommiblog-search {
     margin-top: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003269}}
   body header #block-tommiblog-search form {
     margin-top: 45px;
     margin-left: 30px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003268}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003272}}
   body header #block-tommiblog-search form input.form-search {
     width: 110px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003274}}
   body header #block-tommiblog-search input.form-search {
     width: 80%;
     padding: 2px 8px 2px 15px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003277}}
   body header #block-tommiblog-search input.form-submit {
     width: 38px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003277}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003281}}
   body .footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 90px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003286}}
   body .footer-wrapper #block-footermessage {
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003284}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003288}}
   body .footer-wrapper #block-tommiblog-footer {
     float: right;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003291}}
   body .footer-wrapper footer ul.menu, body .footer-wrapper footer p {
     margin-top: 15px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003290}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003294}}
   body .footer-wrapper footer ul.menu li {
     padding-top: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003295}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003299}}
   body.page-user form#user-login-form label {
     float: left;
     width: 130px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003298}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003302}}
   body.page-user form#user-login-form input {
     width: auto;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003300}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003304}}
   body.page-user form#user-login-form input#edit-submit {
     margin-left: 130px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003302}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003306}}
   body.page-user form#user-login-form .description {
     margin-left: 130px;
     color: #777777;
@@ -462,7 +470,7 @@ main {
     font-size: 13.5px;
     font-size: 0.75rem;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003308}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003312}}
   body #comments .comment, body #comment-form {
     margin-left: -25px;
     margin-right: -25px;
@@ -473,7 +481,7 @@ main {
   /* Footer */
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003218}}
-.lt-ie9 body .l-container {
+.lt-ie9 body .layout-container {
   padding-bottom: 90px;
   min-height: 100%;
 }
@@ -486,6 +494,14 @@ main {
   padding-right: 40px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003223}}
+.lt-ie9 body div[role="contentinfo"] {
+  margin: 0 auto;
+  max-width: auto;
+  width: 926px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003227}}
 .lt-ie9 body header {
   *zoom: 1;
 }
@@ -498,121 +514,121 @@ main {
   overflow: hidden;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003226}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003230}}
 .lt-ie9 body header .name-and-slogan {
   width: auto;
   float: left;
   margin-right: 35px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003234}}
 .lt-ie9 body header .region-header {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003236}}
 .lt-ie9 body header .block {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003238}}
 .lt-ie9 body header #block-tommiblog-search, .lt-ie9 body header #block-socialmediablockheader, .lt-ie9 body header #block-mainnavigation {
   display: block;
   clear: none;
   border: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003242}}
 .lt-ie9 body header #block-socialmediablockheader {
   margin-top: 25px;
   margin-right: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003245}}
 .lt-ie9 body header #block-socialmediablockheader img {
   margin: 0 5px;
   width: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003248}}
 .lt-ie9 body header #block-socialmediablockheader p {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003250}}
 .lt-ie9 body header #block-socialmediablockheader span.rufzeichen {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003252}}
 .lt-ie9 body header #block-mobilemenuswitcher {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003254}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003258}}
 .lt-ie9 body header #block-mainnavigation ul.menu li {
   font-family: oswaldbook, arial, helvetica, sans-serif;
   font-size: 21.6px;
   font-size: 1.2rem;
   line-height: 1.3;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003258}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003262}}
 .lt-ie9 body header #block-mainnavigation ul.menu li a {
   color: #888888;
   background: none;
   border: none;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003267}}
 .lt-ie9 body header #block-tommiblog-search {
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003269}}
 .lt-ie9 body header #block-tommiblog-search form {
   margin-top: 45px;
   margin-left: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003268}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003272}}
 .lt-ie9 body header #block-tommiblog-search form input.form-search {
   width: 110px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003274}}
 .lt-ie9 body header #block-tommiblog-search input.form-search {
   width: 80%;
   padding: 2px 8px 2px 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003277}}
 .lt-ie9 body header #block-tommiblog-search input.form-submit {
   width: 38px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003277}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003281}}
 .lt-ie9 body .footer-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 90px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003286}}
 .lt-ie9 body .footer-wrapper #block-footermessage {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003284}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003288}}
 .lt-ie9 body .footer-wrapper #block-tommiblog-footer {
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003291}}
 .lt-ie9 body .footer-wrapper footer ul.menu, .lt-ie9 body .footer-wrapper footer p {
   margin-top: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003290}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003294}}
 .lt-ie9 body .footer-wrapper footer ul.menu li {
   padding-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003295}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003299}}
 .lt-ie9 body.page-user form#user-login-form label {
   float: left;
   width: 130px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003298}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003302}}
 .lt-ie9 body.page-user form#user-login-form input {
   width: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003300}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003304}}
 .lt-ie9 body.page-user form#user-login-form input#edit-submit {
   margin-left: 130px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003302}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003306}}
 .lt-ie9 body.page-user form#user-login-form .description {
   margin-left: 130px;
   color: #777777;
@@ -620,7 +636,7 @@ main {
   font-size: 13.5px;
   font-size: 0.75rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003308}}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/xampp\/htdocs\/rufzeichen\/tommiblog-stable\/themes\/tommiblog\/sass\/layout\.sass}line{font-family:\00003312}}
 .lt-ie9 body #comments .comment, .lt-ie9 body #comment-form {
   margin-left: -25px;
   margin-right: -25px;

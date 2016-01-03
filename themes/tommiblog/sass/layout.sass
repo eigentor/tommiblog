@@ -190,7 +190,7 @@ body
   +breakpoint($breakpoint-phablet)
 
     // some settings to keep the footer cleanly at the bottom
-    .l-container
+    .layout-container
       position: relative
       min-height: 100%
     .name-and-slogan
@@ -215,11 +215,15 @@ body
 
 body
   +breakpoint($breakpoint-desktop-with-ie-fallback, $no-query: '.lt-ie9')
-    .l-container 
+    .layout-container
       padding-bottom: 90px
       min-height: 100%
     header, main, footer[role=contentinfo]
       +container-desktop
+    div[role="contentinfo"]
+      +container-desktop-inward
+      margin-top: 30px
+      margin-bottom: 10px
     header
       +legacy-pie-clearfix
       //padding-top: 20px

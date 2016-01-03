@@ -22,7 +22,12 @@ $gutter-width: 1/7
   max-width: auto 
   width: 1006px
   padding-left: $desktop-grid-padding 
-  padding-right: $desktop-grid-padding 
+  padding-right: $desktop-grid-padding
+
+@mixin container-desktop-inward
+  margin: 0 auto
+  max-width: auto
+  width: 1006px - ($desktop-grid-padding * 2)
 
 // Breakpoints
 $breakpoint-desktop-with-ie-fallback: 960px
