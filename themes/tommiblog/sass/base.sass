@@ -33,9 +33,9 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h4 a, h6 a
   margin-bottom: 0.5em
   line-height: 1.3
 
-.name-and-slogan 
+#block-tommiblog-branding
   margin-top: 15px
-  .site-name, .site-name a
+  a[title=Startseite]
     font-family: $font-family-sitetitle
     font-weight: normal
     @include x-rem(font-size, 3)
@@ -160,7 +160,7 @@ div[aria-label="Statusmeldung"]
 .messages--error 
   background-color: #fcf4f2
   color: #a51b00
-  background-image: url(../../../core/misc/icons/e32700/error.svg) 
+  background-image: url(../../../core/misc/icons/e32700/error.svg)
   border-color: #f9c9bf #f9c9bf #f9c9bf transparent  /* LTR */
   box-shadow: -8px 0 0 #e62600 /* LTR */
 
@@ -195,8 +195,8 @@ div[aria-label="Statusmeldung"]
 
 body
   +breakpoint($breakpoint-phablet)
-    .name-and-slogan
-      .site-name, .site-name a
+    #block-tommiblog-branding
+      a[title=Startseite]
         @include x-rem(font-size, 4.5)
 
 
@@ -219,8 +219,8 @@ body
       h2 
         margin-bottom: 2px
 
-    .name-and-slogan
-      .site-name, .site-name a
+    #block-tommiblog-branding
+      a[title=Startseite]
         @include x-rem(font-size, 6)
         margin-left: -5px
 
