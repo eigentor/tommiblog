@@ -1,0 +1,10 @@
+uuid: b7468764-810e-4590-8409-9cfa63329934
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser
+label: Anrisstext
+targetEntityType: node
+cache: true

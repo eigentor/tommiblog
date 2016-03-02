@@ -1,0 +1,20 @@
+uuid: e0c58fbd-cbbc-4588-b501-017aadc2739f
+langcode: de
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bartik
+id: bartik_help
+theme: bartik
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Hilfe
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: ed1e35d1-f62c-4352-8d0c-12a4cde1b434
+langcode: de
+status: true
+dependencies:
+  theme:
+    - tommiblog
+id: tommiblog_page_title
+theme: tommiblog
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Seitentitel
+  provider: core
+  label_display: '0'
+visibility: {  }

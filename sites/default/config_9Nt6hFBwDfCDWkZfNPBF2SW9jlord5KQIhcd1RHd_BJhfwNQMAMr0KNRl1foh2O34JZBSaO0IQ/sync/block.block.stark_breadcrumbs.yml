@@ -1,0 +1,20 @@
+uuid: c244090c-7172-4927-a307-7df94fd595b7
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stark
+id: stark_breadcrumbs
+theme: stark
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

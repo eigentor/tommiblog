@@ -1,0 +1,11 @@
+uuid: 5e2c4a61-2527-4fb4-9000-c92930b6230b
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_unpromote_action
+label: 'Inhalt von der Startseite entfernen'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

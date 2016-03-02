@@ -1,0 +1,20 @@
+uuid: febf93ee-418d-4055-9b26-3814cfa88c07
+langcode: de
+status: true
+dependencies:
+  theme:
+    - stark
+id: stark_local_tasks
+theme: stark
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

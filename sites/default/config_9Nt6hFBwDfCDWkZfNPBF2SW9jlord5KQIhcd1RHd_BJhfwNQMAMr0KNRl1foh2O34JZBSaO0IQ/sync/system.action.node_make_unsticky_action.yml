@@ -1,0 +1,11 @@
+uuid: b27f31f0-5b23-42c7-b93a-58329707d7ca
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_make_unsticky_action
+label: 'Hervorhebung zurücknehmen'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

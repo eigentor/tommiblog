@@ -1,0 +1,20 @@
+uuid: 83004c3a-db9c-445f-aa03-3dcea057a6c5
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tommiblog
+id: tommiblog_powered
+theme: tommiblog
+region: '-1'
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 32d722cd-dda9-4c7a-891d-2934712b1981
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: user.register
+label: Registrieren
+targetEntityType: user
+cache: true

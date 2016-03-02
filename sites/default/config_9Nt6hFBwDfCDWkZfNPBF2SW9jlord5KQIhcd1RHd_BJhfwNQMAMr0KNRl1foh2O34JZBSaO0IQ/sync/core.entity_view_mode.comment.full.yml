@@ -1,0 +1,10 @@
+uuid: ec5523d7-2d68-4dc0-9208-8daa86561f28
+langcode: de
+status: false
+dependencies:
+  module:
+    - comment
+id: comment.full
+label: 'Kompletter Kommentar'
+targetEntityType: comment
+cache: true

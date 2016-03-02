@@ -1,0 +1,20 @@
+uuid: e69c0576-66c6-46f2-9d54-84ec2f55ae8c
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tommiblog
+id: tommiblog_messages
+theme: tommiblog
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility: {  }

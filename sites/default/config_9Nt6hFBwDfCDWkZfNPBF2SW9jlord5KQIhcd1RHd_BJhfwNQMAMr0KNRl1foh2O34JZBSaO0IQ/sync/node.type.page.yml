@@ -1,0 +1,11 @@
+uuid: f9226d40-f85c-4d27-9500-d0a6828f7546
+langcode: de
+status: true
+dependencies: {  }
+name: 'Einfache Seite'
+type: page
+description: 'Benutzen Sie <em>Einfache Seiten</em> für statischen Inhalt, wie z.B. eine „Über uns“ Seite.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

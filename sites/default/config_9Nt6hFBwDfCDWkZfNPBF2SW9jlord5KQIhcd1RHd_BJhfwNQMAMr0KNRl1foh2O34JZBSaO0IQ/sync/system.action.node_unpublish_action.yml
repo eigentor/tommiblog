@@ -1,0 +1,11 @@
+uuid: df519c02-2d2e-4207-b608-8a3576fe628b
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_unpublish_action
+label: 'Die Veröffentlichung von Inhalt zurücknehmen'
+type: node
+plugin: node_unpublish_action
+configuration: {  }

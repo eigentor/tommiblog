@@ -1,0 +1,8 @@
+uuid: d46c96f0-c973-4ef1-8b00-bceb67388820
+langcode: de
+status: true
+dependencies: {  }
+id: footer
+label: Fußbereich
+description: 'Site information links'
+locked: true

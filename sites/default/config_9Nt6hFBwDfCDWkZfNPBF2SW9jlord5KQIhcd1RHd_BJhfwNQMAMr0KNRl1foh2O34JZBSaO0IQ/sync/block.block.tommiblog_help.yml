@@ -1,0 +1,20 @@
+uuid: ace78589-208d-4ce2-be00-cedf0d35ba90
+langcode: de
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tommiblog
+id: tommiblog_help
+theme: tommiblog
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Hilfe
+  provider: help
+  label_display: '0'
+visibility: {  }

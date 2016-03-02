@@ -1,0 +1,9 @@
+uuid: ae522360-0416-4ff5-b000-a60fd5e31724
+langcode: de
+status: true
+dependencies: {  }
+id: personal
+label: 'Persönliches Kontaktformular'
+recipients: {  }
+reply: ''
+weight: 0

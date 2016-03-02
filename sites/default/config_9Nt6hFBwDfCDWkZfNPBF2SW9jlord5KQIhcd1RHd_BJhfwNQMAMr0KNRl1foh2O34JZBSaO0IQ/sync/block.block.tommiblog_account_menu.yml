@@ -1,0 +1,24 @@
+uuid: 59bb49ba-e328-4da0-9301-1a49e10e8f3d
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - tommiblog
+id: tommiblog_account_menu
+theme: tommiblog
+region: '-1'
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

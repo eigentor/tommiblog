@@ -1,0 +1,20 @@
+uuid: 7d707509-92a1-4e36-bb5e-9402e62a62f2
+langcode: de
+status: true
+dependencies:
+  theme:
+    - tommiblog
+id: tommiblog_local_tasks
+theme: tommiblog
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

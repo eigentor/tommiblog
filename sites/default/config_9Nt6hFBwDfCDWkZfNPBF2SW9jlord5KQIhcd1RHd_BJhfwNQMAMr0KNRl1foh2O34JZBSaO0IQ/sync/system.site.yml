@@ -1,0 +1,12 @@
+uuid: c0afeb26-4e4b-49a9-ac00-f50bcf6bd794
+name: Tommiblog
+mail: info@rufzeichen-online.de
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: de
+default_langcode: de

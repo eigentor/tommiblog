@@ -1,0 +1,24 @@
+uuid: 9c459fdb-8a04-4b56-8f47-7156fa53546e
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - tommiblog
+id: tommiblog_tools
+theme: tommiblog
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Werkzeuge
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

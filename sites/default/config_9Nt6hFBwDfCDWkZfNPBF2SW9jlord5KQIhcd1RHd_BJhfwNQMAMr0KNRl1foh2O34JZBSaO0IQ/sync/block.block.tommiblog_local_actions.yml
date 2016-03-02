@@ -1,0 +1,18 @@
+uuid: 9a77f9c3-29f1-4294-9e03-3cab92537ce0
+langcode: de
+status: true
+dependencies:
+  theme:
+    - tommiblog
+id: tommiblog_local_actions
+theme: tommiblog
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

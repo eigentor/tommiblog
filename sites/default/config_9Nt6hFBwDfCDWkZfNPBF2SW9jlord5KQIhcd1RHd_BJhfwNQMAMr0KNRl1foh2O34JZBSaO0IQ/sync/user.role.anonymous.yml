@@ -1,0 +1,14 @@
+uuid: 43fe737e-0f6f-441a-8315-21584d9b286e
+langcode: de
+status: true
+dependencies: {  }
+id: anonymous
+label: Gast
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use text format restricted_html'
+  - 'access comments'
+  - 'access site-wide contact form'
+  - 'search content'

@@ -1,0 +1,17 @@
+uuid: f5fb1c9b-f9f5-4e26-9238-56254942a7bb
+langcode: de
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Angemeldete Benutzer'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use text format basic_html'
+  - 'access comments'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'access site-wide contact form'
+  - 'access shortcuts'
+  - 'search content'

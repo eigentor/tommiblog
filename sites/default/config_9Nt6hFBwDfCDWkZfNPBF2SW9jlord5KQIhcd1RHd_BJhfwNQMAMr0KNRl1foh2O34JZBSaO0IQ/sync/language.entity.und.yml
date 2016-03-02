@@ -1,0 +1,9 @@
+uuid: 8495aa1f-2810-4b59-a600-d50f2cb33154
+langcode: de
+status: true
+dependencies: {  }
+id: und
+label: 'Nicht angegeben'
+direction: ltr
+weight: 2
+locked: true

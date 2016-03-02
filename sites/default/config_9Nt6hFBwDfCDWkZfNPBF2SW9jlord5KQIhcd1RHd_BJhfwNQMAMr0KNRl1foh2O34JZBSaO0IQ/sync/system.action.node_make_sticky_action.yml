@@ -1,0 +1,11 @@
+uuid: b65de736-7248-4553-ac00-e2b3656fc429
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_make_sticky_action
+label: 'Inhalt hervorheben'
+type: node
+plugin: node_make_sticky_action
+configuration: {  }

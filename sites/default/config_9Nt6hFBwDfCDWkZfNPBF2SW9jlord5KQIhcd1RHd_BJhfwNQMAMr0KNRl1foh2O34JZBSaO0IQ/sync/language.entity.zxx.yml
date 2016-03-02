@@ -1,0 +1,9 @@
+uuid: f53b0490-b68d-43dc-bf00-b00c3394b3bd
+langcode: de
+status: true
+dependencies: {  }
+id: zxx
+label: 'Nicht zutreffend'
+direction: ltr
+weight: 3
+locked: true

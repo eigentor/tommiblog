@@ -1,0 +1,11 @@
+uuid: c0aa2ad1-cd09-4569-b214-204471be836c
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_delete_action
+label: 'Inhalt löschen'
+type: node
+plugin: node_delete_action
+configuration: {  }

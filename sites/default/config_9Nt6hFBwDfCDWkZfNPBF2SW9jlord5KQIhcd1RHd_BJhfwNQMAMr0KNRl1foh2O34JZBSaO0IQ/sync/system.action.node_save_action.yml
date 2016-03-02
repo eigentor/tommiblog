@@ -1,0 +1,11 @@
+uuid: 090bb66f-ab49-4ee4-a513-1977cf2bbc21
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_save_action
+label: 'Inhalt speichern'
+type: node
+plugin: node_save_action
+configuration: {  }

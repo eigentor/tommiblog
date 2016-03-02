@@ -1,0 +1,15 @@
+uuid: 2c141f0f-9b77-4a5b-913f-639fcd3e761d
+langcode: de
+status: true
+dependencies: {  }
+name: medium
+label: 'Medium (220×220)'
+effects:
+  bddf0d06-42f9-4c75-a700-a33cafa25ea0:
+    uuid: bddf0d06-42f9-4c75-a700-a33cafa25ea0
+    id: image_scale
+    weight: 0
+    data:
+      width: 220
+      height: 220
+      upscale: false

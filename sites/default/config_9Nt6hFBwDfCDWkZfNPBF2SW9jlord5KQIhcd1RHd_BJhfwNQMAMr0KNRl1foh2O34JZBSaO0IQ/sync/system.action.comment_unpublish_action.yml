@@ -1,0 +1,11 @@
+uuid: 8a3c1894-41c9-4f4c-bd02-023327da0c5a
+langcode: de
+status: true
+dependencies:
+  module:
+    - comment
+id: comment_unpublish_action
+label: 'Kommentar zurücknehmen'
+type: comment
+plugin: comment_unpublish_action
+configuration: {  }

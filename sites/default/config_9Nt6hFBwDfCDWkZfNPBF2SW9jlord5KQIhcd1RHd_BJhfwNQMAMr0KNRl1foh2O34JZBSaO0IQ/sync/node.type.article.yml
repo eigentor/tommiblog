@@ -1,0 +1,11 @@
+uuid: 0035d30f-130c-4593-b600-fa9e774c45ea
+langcode: de
+status: true
+dependencies: {  }
+name: Artikel
+type: article
+description: 'Benutzen Sie <em>Artikel</em> für zeitkritische Inhalte wie Nachrichten, Pressemeldungen oder Blogeinträge.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,11 @@
+uuid: 8f2daccf-1325-432a-981a-26c0109ec95d
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node_promote_action
+label: 'Inhalt auf der Startseite veröffentlichen'
+type: node
+plugin: node_promote_action
+configuration: {  }

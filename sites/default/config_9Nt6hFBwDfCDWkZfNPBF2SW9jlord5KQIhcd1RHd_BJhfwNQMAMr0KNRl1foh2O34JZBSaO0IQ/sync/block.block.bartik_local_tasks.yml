@@ -1,0 +1,20 @@
+uuid: 4e07d5fc-d743-4e44-9f00-a8430c9841fa
+langcode: de
+status: true
+dependencies:
+  theme:
+    - bartik
+id: bartik_local_tasks
+theme: bartik
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,9 @@
+uuid: c82b1809-b517-4134-9a00-e1343ff0e6d3
+langcode: de
+status: true
+dependencies: {  }
+name: Tags
+vid: tags
+description: 'Mit Schlagwörtern können Artikel zu verwandten Themen in Kategorien zusammengefasst werden.'
+hierarchy: 0
+weight: 0
