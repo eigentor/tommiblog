@@ -11,7 +11,7 @@ dependencies:
 id: tommiblog_main_menu
 theme: tommiblog
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:
