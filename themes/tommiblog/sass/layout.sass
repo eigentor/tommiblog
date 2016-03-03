@@ -116,7 +116,7 @@ header, main, footer[role=contentinfo]
   @include legacy-pie-clearfix
 
 header 
-  #block-tommiblog-search, #block-socialmediablockheader, #block-mainnavigation
+  #block-tommiblog-search, #block-socialmediablockheader, #block-tommiblog-main-menu
     display: none
     clear: left
     border: 1px solid transparent
@@ -129,11 +129,13 @@ header
     @include border-radius(3px)
     float: right
     margin-top: 18px
-  #block-mainnavigation 
-    ul.menu 
+  #block-tommiblog-main-menu
+    ul
       margin-left: 0
       margin-bottom: 25px
-      li 
+      li
+        list-style: none
+        list-style-image: none
         a
           padding: 5px 8px
           border: 1px solid #ccc
@@ -235,9 +237,10 @@ body
         float: left
       .block 
         float: left
-      #block-tommiblog-search, #block-socialmediablockheader, #block-mainnavigation
+      #block-tommiblog-branding, #block-tommiblog-search, #block-socialmediablockheader, #block-tommiblog-main-menu
         display: block
         clear: none
+        float: left
         border: 0
       #block-socialmediablockheader
         margin-top: 25px
@@ -253,8 +256,8 @@ body
         display: none
      
         
-      #block-mainnavigation 
-        ul.menu 
+      #block-tommiblog-main-menu
+        ul
           li 
             font-family: $font-family-headlines
             @include x-rem(font-size, 1.2)
