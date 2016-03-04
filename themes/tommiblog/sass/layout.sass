@@ -14,6 +14,10 @@ body
   margin-top: 30px
   margin-bottom: 15px
   +legacy-pie-clearfix
+  .form-item-keys
+    float: left
+  #edit-actions
+    float: left
   form 
     width: 90%
   input.form-search 
@@ -21,7 +25,7 @@ body
     border: 1px solid #999
     margin-right: 0
     float: left
-    height: 22px
+    height: 28px
     width: 70%
     padding: 2px 8px 2px 15px
 
@@ -42,7 +46,7 @@ body
 .l-container 
   margin: 0
   padding: 0
-.name-and-slogan 
+#block-tommiblog-branding
   float: right
   width: 80%
   text-align: center
@@ -136,6 +140,7 @@ header
       li
         list-style: none
         list-style-image: none
+        padding-top: 0.2em
         a
           padding: 5px 8px
           border: 1px solid #ccc
@@ -195,7 +200,7 @@ body
     .layout-container
       position: relative
       min-height: 100%
-    .name-and-slogan
+    #block-tommiblog-branding
       text-align: left
 
     header 
@@ -229,7 +234,7 @@ body
     header
       +legacy-pie-clearfix
       //padding-top: 20px
-      .name-and-slogan
+      #block-tommiblog-branding
         width: auto 
         float: left
         margin-right: 35px
@@ -237,7 +242,7 @@ body
         float: left
       .block 
         float: left
-      #block-tommiblog-branding, #block-tommiblog-search, #block-socialmediablockheader, #block-tommiblog-main-menu
+      #block-tommiblog-search, #block-socialmediablockheader, #block-tommiblog-main-menu
         display: block
         clear: none
         float: left
@@ -258,6 +263,7 @@ body
         
       #block-tommiblog-main-menu
         ul
+          padding-left: 0
           li 
             font-family: $font-family-headlines
             @include x-rem(font-size, 1.2)
