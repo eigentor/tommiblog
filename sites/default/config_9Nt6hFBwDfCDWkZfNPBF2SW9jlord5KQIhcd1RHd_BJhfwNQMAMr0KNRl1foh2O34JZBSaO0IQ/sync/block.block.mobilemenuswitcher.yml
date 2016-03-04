@@ -1,0 +1,25 @@
+uuid: 94c2c808-6300-4910-9f09-9b032c08fdd9
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7a50de9a-79a7-4d59-b400-b26f03b1502a'
+  module:
+    - block_content
+  theme:
+    - tommiblog
+id: mobilemenuswitcher
+theme: tommiblog
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:7a50de9a-79a7-4d59-b400-b26f03b1502a'
+settings:
+  id: 'block_content:7a50de9a-79a7-4d59-b400-b26f03b1502a'
+  label: 'Mobile Menu Switcher'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
