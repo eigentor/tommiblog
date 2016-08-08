@@ -2,14 +2,8 @@
 # Apache/PHP/Drupal settings:
 #
 
-AuthUserFile /www/htdocs/w011d8a0/tommiblog-d8-stable/.htpasswd
-AuthGroupFile /dev/null
-AuthName 'bitte Zugangsdaten eingeben'
-AuthType Basic
-require valid-user
-
 # Protect files and directories from prying eyes.
-<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
+<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
@@ -99,7 +93,7 @@ AddEncoding gzip svgz
   # If you do not have mod_rewrite installed, you should remove these
   # directories from your webroot or otherwise protect them from being
   # downloaded.
-  RewriteRule "(^|/)\." - [F]
+  RewriteRule "(^|/)\.(?!well-known)" - [F]
 
   # If your site can be accessed both with and without the 'www.' prefix, you
   # can use one of the following settings to redirect users to your preferred
@@ -186,8 +180,16 @@ AddEncoding gzip svgz
   </IfModule>
 </IfModule>
 
-# Add headers to all responses.
+# Various header fixes.
 <IfModule mod_headers.c>
   # Disable content sniffing, since it's an attack vector.
   Header always set X-Content-Type-Options nosniff
+  # Disable Proxy header, since it's an attack vector.
+  RequestHeader unset Proxy
 </IfModule>
+
+#AuthUserFile /www/htdocs/w011d8a0/tommiblog-d8-stable/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName 'bitte Zugangsdaten eingeben'
+#AuthType Basic
+#require valid-user
