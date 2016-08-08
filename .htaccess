@@ -188,8 +188,8 @@ AddEncoding gzip svgz
   RequestHeader unset Proxy
 </IfModule>
 
-#AuthUserFile /www/htdocs/w011d8a0/tommiblog-d8-stable/.htpasswd
-#AuthGroupFile /dev/null
-#AuthName 'bitte Zugangsdaten eingeben'
-#AuthType Basic
-#require valid-user
+AuthUserFile /www/htdocs/w011d8a0/tommiblog-d8-stable/.htpasswd
+AuthGroupFile /dev/null
+AuthName 'bitte Zugangsdaten eingeben'
+AuthType Basic
+require valid-user
