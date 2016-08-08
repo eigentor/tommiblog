@@ -7,7 +7,7 @@ dependencies:
     - node
     - user
 id: comments_recent
-label: 'Recent comments'
+label: 'Neueste Kommentare'
 module: views
 description: 'Recent comments.'
 tag: default
@@ -223,7 +223,7 @@ display:
           plugin_id: field
           entity_type: comment
           entity_field: cid
-      title: 'Recent comments'
+      title: 'Neueste Kommentare'
       empty:
         area_text_custom:
           id: area_text_custom
@@ -234,7 +234,7 @@ display:
           admin_label: ''
           label: ''
           empty: true
-          content: 'No comments available.'
+          content: 'Keine Kommentare verfügbar.'
           tokenize: false
           plugin_id: text_custom
       display_extenders: {  }
@@ -251,8 +251,8 @@ display:
     display_title: Block
     position: 1
     display_options:
-      block_description: 'Recent comments'
-      block_category: 'Lists (Views)'
+      block_description: 'Neueste Kommentare'
+      block_category: 'Listen (Ansichten)'
       allow:
         items_per_page: true
       display_extenders: {  }

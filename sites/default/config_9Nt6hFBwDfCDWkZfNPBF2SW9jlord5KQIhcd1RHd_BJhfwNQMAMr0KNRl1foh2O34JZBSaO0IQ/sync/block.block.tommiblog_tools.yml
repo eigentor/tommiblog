@@ -10,7 +10,7 @@ dependencies:
     - tommiblog
 id: tommiblog_tools
 theme: tommiblog
-region: sidebar_first
+region: '-1'
 weight: -6
 provider: null
 plugin: 'system_menu_block:tools'

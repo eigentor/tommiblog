@@ -6,7 +6,7 @@ dependencies:
     - file
     - user
 id: files
-label: Files
+label: Dateien
 module: file
 description: 'Find and manage files.'
 tag: default
@@ -40,11 +40,11 @@ display:
         options:
           submit_button: Filter
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
       pager:
         type: mini
         options:
@@ -53,14 +53,14 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '< Zurück'
+            next: 'Weiter >'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elemente pro Seite'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
             offset_label: Offset
       style:
@@ -248,7 +248,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Mime type'
+          label: MIME-Typ
           exclude: false
           alter:
             alter_text: false
@@ -300,7 +300,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Size
+          label: Größe
           exclude: false
           alter:
             alter_text: false
@@ -408,7 +408,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Upload date'
+          label: 'Upload Datum'
           exclude: false
           alter:
             alter_text: false
@@ -464,7 +464,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Changed date'
+          label: 'Datum geändert'
           exclude: false
           alter:
             alter_text: false
@@ -520,7 +520,7 @@ display:
           relationship: fid
           group_type: sum
           admin_label: ''
-          label: 'Used in'
+          label: 'Verwendet in'
           exclude: false
           alter:
             alter_text: false
@@ -584,7 +584,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Filename
+            label: Dateiname
             description: ''
             use_operator: false
             operator: filename_op
@@ -624,7 +624,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: 'Mime type'
+            label: MIME-Typ
             description: ''
             use_operator: false
             operator: filemime_op
@@ -693,7 +693,7 @@ display:
           entity_type: file
           entity_field: status
       sorts: {  }
-      title: Files
+      title: Dateien
       header: {  }
       footer: {  }
       empty:
@@ -702,7 +702,7 @@ display:
           table: views
           field: area_text_custom
           empty: true
-          content: 'No files available.'
+          content: 'Keine Dateien verfügbar'
           plugin_id: text_custom
       relationships:
         fid:
@@ -735,11 +735,13 @@ display:
       path: admin/content/files
       menu:
         type: tab
-        title: Files
+        title: Dateien
         description: ''
         menu_name: admin
         weight: 0
         context: ''
+        enabled: true
+        expanded: false
       display_description: ''
       defaults:
         pager: true
@@ -792,14 +794,14 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '< Zurück'
+            next: 'Weiter >'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elemente pro Seite'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
             offset_label: Offset
       filters: {  }
@@ -814,7 +816,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Entity
+          label: Entität
           exclude: false
           alter:
             alter_text: false
@@ -864,7 +866,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Entity type'
+          label: Entitätstyp
           exclude: false
           alter:
             alter_text: false
@@ -962,7 +964,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Use count'
+          label: 'Anzahl der Verwendung'
           exclude: false
           alter:
             alter_text: false
@@ -1026,7 +1028,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Alle
           title_enable: true
           title: 'File usage information for {{ arguments.fid }}'
           default_argument_type: fixed
@@ -1112,6 +1114,9 @@ display:
           admin_label: 'File usage'
           required: true
       display_extenders: {  }
+      menu:
+        enabled: true
+        expanded: false
     cache_metadata:
       contexts:
         - 'languages:language_interface'
