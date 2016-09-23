@@ -187,9 +187,3 @@ AddEncoding gzip svgz
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
-
-AuthUserFile /www/htdocs/w011d8a0/tommiblog-d8-stable/.htpasswd
-AuthGroupFile /dev/null
-AuthName 'bitte Zugangsdaten eingeben'
-AuthType Basic
-require valid-user
