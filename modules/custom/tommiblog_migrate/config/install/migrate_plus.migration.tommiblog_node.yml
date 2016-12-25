@@ -4,6 +4,8 @@ label: Import blog nodes from old site
 migration_dependencies: {}
 source:
   plugin: tommiblog_node
+  # Enable "track changes" feature.
+  track_changes: true
 destination:
   plugin: entity:node
   node_type: article
@@ -21,7 +23,9 @@ process:
   title: title
   uid: plugin: default_value
     default_value: 1
-  status: status
+  status:
+    plugin: default_value
+    default_value: 1
   created: created
   changed: changed
   promote: promote
