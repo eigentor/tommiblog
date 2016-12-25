@@ -6,24 +6,34 @@ source:
   plugin: tommiblog_node
 destination:
   plugin: entity:node
-  node_type: story
+  node_type: article
   target: news_node_migration
 process:
   # Hardcode the destination node type (bundle) as 'article'.
+  nid: nid
+  vid: vid
+  uuid: uuid
   type:
     plugin: default_value
     default_value: article
-  nid: nid
-  uid: plugin: default_value
-       default_value: 30
+  langcode: langcode
+  default_langcode: default_langcode
   title: title
-  'body/value': body
-  'body/summary': teaser
-  'body/format':
-    plugin: default_value
-    default_value: basic_html
+  uid: plugin: default_value
+    default_value: 1
+  status: status
   created: created
   changed: changed
-  status: status
+  promote: promote
   sticky: sticky
-  langcode: language
+  revision_translation_affected:
+    plugin: default_value
+    default_value: 1
+
+  'body/value': body_value
+  'body/summary': body_summary
+  'body/format':
+    plugin: default_value
+    default_value: full_html
+
+
