@@ -1,0 +1,6 @@
+name: Tommiblog Migrate
+description: Migrate content into Tommiblog
+package: Tommiblog
+
+type: module
+core: 8.x

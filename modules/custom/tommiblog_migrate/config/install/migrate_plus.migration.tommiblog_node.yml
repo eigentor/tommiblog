@@ -1,0 +1,29 @@
+# Migration configuration for node content.
+id: tommiblog_node
+label: Import blog nodes from old site
+migration_dependencies: {}
+source:
+  plugin: tommiblog_node
+destination:
+  plugin: entity:node
+  node_type: story
+  target: news_node_migration
+process:
+  # Hardcode the destination node type (bundle) as 'article'.
+  type:
+    plugin: default_value
+    default_value: article
+  nid: nid
+  uid: plugin: default_value
+       default_value: 30
+  title: title
+  'body/value': body
+  'body/summary': teaser
+  'body/format':
+    plugin: default_value
+    default_value: basic_html
+  created: created
+  changed: changed
+  status: status
+  sticky: sticky
+  langcode: language
