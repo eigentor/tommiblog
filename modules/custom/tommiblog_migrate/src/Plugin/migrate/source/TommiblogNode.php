@@ -17,7 +17,42 @@ use Drupal\migrate\Row;
  * )
  */
 
-class TommiblogNode extends DrupalSqlBase {
+class TommiblogNode extends SqlBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function query() {
+    $query = $this->select('node', 'n')
+      ->condition('n.type', 'article')
+      ->fields('n', array(
+        'nid',
+        'vid',
+        'uuid',
+        'langcode',
+        'default_langcode',
+        'title',
+        'status',
+        'created',
+        'changed',
+        'promote',
+        'sticky',
+      ));
+    $query->orderBy('nid');
+  return $query;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function fields() {
+    $fields = $this->baseFields();
+    $fields['body/format'] = $this->t('Format of body');
+    $fields['body/value'] = $this->t('Full text of body');
+    $fields['body/summary'] = $this->t('Summary of body');
+    return $fields;
+  }
+
 
   public function prepareRow(Row $row) {
 
@@ -32,6 +67,20 @@ class TommiblogNode extends DrupalSqlBase {
 //    if (!empty($alias)) {
 //      $row->setSourceProperty('alias', '/' . $alias);
 //    }
+    $row->setSourceProperty('data', unserialize($row->getSourceProperty('data')));
+    return parent::prepareRow($row);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getIds() {
+    return array(
+      'nid' => array(
+        'type' => 'integer',
+        'alias' => 'n',
+      ),
+    );
   }
 
 }

@@ -21,7 +21,8 @@ process:
   langcode: langcode
   default_langcode: default_langcode
   title: title
-  uid: plugin: default_value
+  uid:
+    plugin: default_value
     default_value: 1
   status:
     plugin: default_value
