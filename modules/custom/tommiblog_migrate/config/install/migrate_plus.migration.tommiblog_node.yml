@@ -31,10 +31,6 @@ process:
   changed: changed
   promote: promote
   sticky: sticky
-  revision_translation_affected:
-    plugin: default_value
-    default_value: 1
-
   'body/value': body_value
   'body/summary': body_summary
   'body/format':
