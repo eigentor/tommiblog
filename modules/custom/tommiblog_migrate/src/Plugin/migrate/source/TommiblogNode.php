@@ -6,7 +6,7 @@
 
 namespace Drupal\tommiblog_migrate\Plugin\migrate\source;
 
-use Drupal\migrate\Plugin\migrate\source\SqlBase;
+use Drupal\migrate\Plugin\migrate\source\DrupalSqlBase;
 use Drupal\migrate\Row;
 
 /**
@@ -17,7 +17,7 @@ use Drupal\migrate\Row;
  * )
  */
 
-class TommiblogNode extends SqlBase {
+class TommiblogNode extends DrupalSqlBase {
 
   /**
    * {@inheritdoc}
@@ -29,28 +29,55 @@ class TommiblogNode extends SqlBase {
         'nid',
         'vid',
         'uuid',
-        'langcode',
-        'default_langcode',
-        'title',
-        'status',
-        'created',
-        'changed',
-        'promote',
-        'sticky',
       ));
     $query->orderBy('nid');
   return $query;
   }
 
+     /**
+     * {@inheritdoc}
+     */
+    public function fields() {
+      $fields = $this->baseFields();
+      $fields = array(
+        'body_format'=> $this->t('Input Format of the body field.'),
+        'body_value'=> $this->t('Value of the full body field.'),
+        'body_summary'=> $this->t('Value of the body teaser field.'),
+      );
+      return $fields;
+    }
+
+
   /**
-   * {@inheritdoc}
+   * Returns the user base fields to be migrated.
+   *
+   * @return array
+   *   Associative array having field name as key and description as value.
    */
-  public function fields() {
-    $fields = $this->baseFields();
-    $fields['body/format'] = $this->t('Format of body');
-    $fields['body/value'] = $this->t('Full text of body');
-    $fields['body/summary'] = $this->t('Summary of body');
+  protected function baseFields() {
+    $fields = array(
+      'nid' => $this->t('Node ID'),
+      'vid' => $this->t('Version ID'),
+      'uuid' => $this->t('UUID'),
+      'type' => $this->t('Type'),
+      'langcode' => $this->t('Language (fr, en, ...)'),
+      'default_langcode' => $this->t('Default Language (fr, en, ...)'),
+      'title' => $this->t('Title'),
+      'uid' => $this->t('uid'),
+      'format' => $this->t('Format'),
+      'teaser' => $this->t('Teaser'),
+      'node_uid' => $this->t('Node authored by (uid)'),
+      'revision_uid' => $this->t('Revision authored by (uid)'),
+      'created' => $this->t('Created timestamp'),
+      'changed' => $this->t('Modified timestamp'),
+      'status' => $this->t('Published'),
+      'promote' => $this->t('Promoted to front page'),
+      'sticky' => $this->t('Sticky at top of lists'),
+      'revision' => $this->t('Create new revision'),
+      'timestamp' => $this->t('The timestamp the latest revision of this node was created.'),
+    );
     return $fields;
+
   }
 
 
