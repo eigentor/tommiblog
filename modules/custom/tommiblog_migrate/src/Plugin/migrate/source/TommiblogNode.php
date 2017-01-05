@@ -63,14 +63,10 @@ class TommiblogNode extends DrupalSqlBase {
       'langcode' => $this->t('Language (fr, en, ...)'),
       'default_langcode' => $this->t('Default Language (fr, en, ...)'),
       'title' => $this->t('Title'),
-      'uid' => $this->t('uid'),
-      'format' => $this->t('Format'),
-      'teaser' => $this->t('Teaser'),
-      'node_uid' => $this->t('Node authored by (uid)'),
-      'revision_uid' => $this->t('Revision authored by (uid)'),
+      'uid' => $this->t('Node author UID'),
+      'status' => $this->t('Published or not'),
       'created' => $this->t('Created timestamp'),
       'changed' => $this->t('Modified timestamp'),
-      'status' => $this->t('Published'),
       'promote' => $this->t('Promoted to front page'),
       'sticky' => $this->t('Sticky at top of lists'),
       'revision' => $this->t('Create new revision'),
@@ -82,6 +78,53 @@ class TommiblogNode extends DrupalSqlBase {
 
 
   public function prepareRow(Row $row) {
+    $nid = $row->getSourceProperty('nid');
+
+    // Get all the base fields from node_field_data
+    $result = $this->getDatabase()->query('
+      SELECT
+        nd.langcode,
+        nd.default_langcode,
+        nd.title
+        nd.uid
+        nd.status
+        nd.created
+        nd.changed
+        nd.promote
+        nd.sticky
+      FROM
+        {node_field_data} nd
+      WHERE
+        nd.nid = :nid
+    ', array(':nid' => $nid));
+    foreach ($result as $record) {
+      $row->setSourceProperty('langcode', $record->langcode );
+      $row->setSourceProperty('default_langcode', $record->langcode );
+      $row->setSourceProperty('title', $record->title );
+      $row->setSourceProperty('uid', $record->uid );
+      $row->setSourceProperty('status', $record->status );
+      $row->setSourceProperty('created', $record->created );
+      $row->setSourceProperty('changed', $record->changed );
+      $row->setSourceProperty('promote', $record->promote );
+      $row->setSourceProperty('sticky', $record->sticky );
+    }
+
+    // body (compound field with value, summary, and format)
+    $result = $this->getDatabase()->query('
+      SELECT
+        fld.body_value,
+        fld.body_summary,
+        fld.body_format
+      FROM
+        {node_body} fld
+      WHERE
+        fld.entity_id = :nid
+    ', array(':nid' => $nid));
+    foreach ($result as $record) {
+      $row->setSourceProperty('body_value', $record->body_value );
+      $row->setSourceProperty('body_summary', $record->body_summary );
+      $row->setSourceProperty('body_format', $record->body_format );
+    }
 
     // Aus ChapterThree Blogpost
     // https://www.chapterthree.com/blog/drupal-to-drupal-8-via-migrate-api
