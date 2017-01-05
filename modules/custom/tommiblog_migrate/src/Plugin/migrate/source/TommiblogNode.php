@@ -6,7 +6,7 @@
 
 namespace Drupal\tommiblog_migrate\Plugin\migrate\source;
 
-use Drupal\migrate\Plugin\migrate\source\DrupalSqlBase;
+use Drupal\migrate\Plugin\migrate\source\SqlBase;
 use Drupal\migrate\Row;
 
 /**
@@ -17,7 +17,7 @@ use Drupal\migrate\Row;
  * )
  */
 
-class TommiblogNode extends DrupalSqlBase {
+class TommiblogNode extends SqlBase {
 
   /**
    * {@inheritdoc}
@@ -85,12 +85,12 @@ class TommiblogNode extends DrupalSqlBase {
       SELECT
         nd.langcode,
         nd.default_langcode,
-        nd.title
-        nd.uid
-        nd.status
-        nd.created
-        nd.changed
-        nd.promote
+        nd.title,
+        nd.uid,
+        nd.status,
+        nd.created,
+        nd.changed,
+        nd.promote,
         nd.sticky
       FROM
         {node_field_data} nd
@@ -116,7 +116,7 @@ class TommiblogNode extends DrupalSqlBase {
         fld.body_summary,
         fld.body_format
       FROM
-        {node_body} fld
+        {node__body} fld
       WHERE
         fld.entity_id = :nid
     ', array(':nid' => $nid));
