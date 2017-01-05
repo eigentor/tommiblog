@@ -11,10 +11,10 @@ destination:
   node_type: article
   target: news_node_migration
 process:
-  # Hardcode the destination node type (bundle) as 'article'.
   nid: nid
   vid: vid
   uuid: uuid
+  # Hardcode the destination node type (bundle) as 'article'.
   type:
     plugin: default_value
     default_value: article
