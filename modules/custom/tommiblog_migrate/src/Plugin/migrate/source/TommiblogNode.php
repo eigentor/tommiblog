@@ -126,6 +126,37 @@ class TommiblogNode extends SqlBase {
       $row->setSourceProperty('body_format', $record->body_format );
     }
 
+    // images
+    $result = $this->getDatabase()->query('
+      SELECT
+        fld.langcode,
+        fld.delta,
+        fld.field_image_target_id,
+        fld.field_image_alt,
+        fld.field_image_title,
+        fld.field_image_width,
+        fld.field_image_height
+      FROM
+        {node__field_image} fld
+      WHERE
+        fld.entity_id = :nid
+    ', array(':nid' => $nid));
+    // Create an associative array for each row in the result. The keys
+    // here match the last part of the column name in the field table.
+    $images = [];
+    foreach ($result as $record) {
+      $images[] = [
+        'langcode' => $record->langcode,
+        'delta' => $record->delta,
+        'target_id' => $record->field_image_target_id,
+        'alt' => $record->field_image_alt,
+        'title' => $record->field_image_title,
+        'width' => $record->field_image_width,
+        'height' => $record->field_image_height,
+      ];
+    }
+    $row->setSourceProperty('images', $images);
+
     // Aus ChapterThree Blogpost
     // https://www.chapterthree.com/blog/drupal-to-drupal-8-via-migrate-api
     // Migrate URL alias.
@@ -137,7 +168,7 @@ class TommiblogNode extends SqlBase {
 //    if (!empty($alias)) {
 //      $row->setSourceProperty('alias', '/' . $alias);
 //    }
-    $row->setSourceProperty('data', unserialize($row->getSourceProperty('data')));
+    //$row->setSourceProperty('data', unserialize($row->getSourceProperty('data')));
     return parent::prepareRow($row);
   }
 

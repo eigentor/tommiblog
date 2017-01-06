@@ -3,3 +3,8 @@
 function tommiblog_page_alter (&$page) {
   $page['#attached']['library'][] = 'tommiblog/tommiblog';
 }
+
+//$result = \Drupal::entityQuery('node')
+//      ->condition('type', 'my_content_type_name')
+//      ->execute();
+//ksm($result);

@@ -1,0 +1,19 @@
+id: tommiblog_tags
+status: true
+langcode: de
+migration_group: Taxonomies
+dependencies:
+  module:
+    - taxonomy
+label: Migrate Tags taxonomy terms
+source:
+  plugin: tommiblog_tags
+destination:
+  plugin: entity:taxonomy_term
+process:
+  vid:
+    plugin: default_value
+    default_value: tags
+  name: name
+  description__value: description__value
+  weight: weight

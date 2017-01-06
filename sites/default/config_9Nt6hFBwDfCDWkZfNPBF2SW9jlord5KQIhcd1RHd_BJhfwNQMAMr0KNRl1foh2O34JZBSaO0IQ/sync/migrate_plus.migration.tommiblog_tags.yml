@@ -1,0 +1,22 @@
+uuid: 2d03c0fa-e316-4cc3-8fda-855f705d012f
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: L7DCohRLXpiLTiF5FnSqAlRZEbbLpCVJ7wT3zW-d3Ac
+id: tommiblog_tags
+migration_tags: null
+migration_group: Taxonomies
+label: 'Migrate Tags taxonomy terms'
+source:
+  plugin: tommiblog_tags
+process:
+  vid:
+    plugin: default_value
+    default_value: tags
+  name: name
+  description_value: description_value
+  weight: weight
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: null

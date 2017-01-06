@@ -1,20 +1,20 @@
-# Migration configuration for node content.
+uuid: 3f42dcca-e6c2-46dc-b377-25cbf789de15
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7jY8EqMVhw0fZCXwDXWJL5fx7w9r08TqGA_kaaJynJw
 id: tommiblog_node
-label: Import blog nodes from old site
-migration_dependencies: {}
+migration_tags: null
+migration_group: null
+label: 'Import blog nodes from old site'
 source:
   plugin: tommiblog_node
-  # Enable "track changes" feature.
   track_changes: true
-destination:
-  plugin: entity:node
-  node_type: article
-  target: news_node_migration
 process:
   nid: nid
   vid: vid
   uuid: uuid
-  # Hardcode the destination node type (bundle) as 'article'.
   type:
     plugin: default_value
     default_value: article
@@ -31,12 +31,15 @@ process:
   changed: changed
   promote: promote
   sticky: sticky
-  'body/value': body_value
-  'body/summary': body_summary
-  'body/format':
+  body/value: body_value
+  body/summary: body_summary
+  body/format:
     plugin: default_value
     default_value: full_html
   field_tags: tags
   field_image: images
-
-
+destination:
+  plugin: 'entity:node'
+  node_type: article
+  target: news_node_migration
+migration_dependencies: {  }
