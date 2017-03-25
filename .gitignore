@@ -40,3 +40,6 @@ sites/simpletest
 .sass-cache/
 *.sassc
 *.scssc
+
+
+stage_file_proxy.settings.yml

@@ -1,9 +1,9 @@
-uuid: 2d03c0fa-e316-4cc3-8fda-855f705d012f
+uuid: 7719967d-ed91-4655-8835-3629ea17f9ee
 langcode: de
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: L7DCohRLXpiLTiF5FnSqAlRZEbbLpCVJ7wT3zW-d3Ac
+  default_config_hash: s3DuoSSY4FZAlA3MByFGJeNNh1mt7h5QQkElpWOfJJQ
 id: tommiblog_tags
 migration_tags: null
 migration_group: Taxonomies
@@ -15,7 +15,7 @@ process:
     plugin: default_value
     default_value: tags
   name: name
-  description_value: description_value
+  description__value: description__value
   weight: weight
 destination:
   plugin: 'entity:taxonomy_term'
