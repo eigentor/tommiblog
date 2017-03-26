@@ -41,5 +41,6 @@ sites/simpletest
 *.sassc
 *.scssc
 
-
+# Ignore settings files of modules different
+# between local and dev / live
 stage_file_proxy.settings.yml
