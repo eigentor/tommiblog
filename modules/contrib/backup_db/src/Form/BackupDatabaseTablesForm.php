@@ -42,16 +42,22 @@ class BackupDatabaseTablesForm extends ConfigFormBase {
       '#title' => $this->t('Include tables'),
       '#options' => $options,
       '#multiple' => TRUE,
+      '#attributes' => [
+        'size' => '8'
+      ],
       '#description' => $this->t('Assign tables to include, leave empty for all.'),
-      '#default_value' => $config->get('include_tables'),
+      '#default_value' => $config->get('settings.include_tables'),
     );
     $form['exclude_tables'] = array(
       '#type' => 'select',
       '#title' => $this->t('Exclude tables'),
       '#options' => $options,
       '#multiple' => TRUE,
+      '#attributes' => [
+        'size' => '8'
+      ],
       '#description' => $this->t('Assign tables to exclude, leave empty for none.'),
-      '#default_value' => $config->get('exclude_tables'),
+      '#default_value' => $config->get('settings.exclude_tables'),
     );
 
     return parent::buildForm($form, $form_state);
@@ -63,8 +69,8 @@ class BackupDatabaseTablesForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
     $this->config('backup_db.settings')
-      ->set('include_tables', $form_state->getValue('include_tables'))
-      ->set('exclude_tables', $form_state->getValue('exclude_tables'))
+      ->set('settings.include_tables', $form_state->getValue('include_tables'))
+      ->set('settings.exclude_tables', $form_state->getValue('exclude_tables'))
       ->save();
   }
 }

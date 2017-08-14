@@ -24,6 +24,16 @@ Installation (@ref, http://cgit.drupalcode.org/address/tree/README.md)
 
 4. enable the Backup Database module.
 
+Manual usage
+
+1. $client = \Drupal::service('backup_db.client');
+2. Do client things (update settings, set new connection)
+   $client->setConnection();
+3. Select our adapter (AWS)
+   $handler = new BackupDatabaseS3Adapter($client);
+4. Do the magic
+   $handler->export();
+
 More information
  - https://www.drupal.org/node/2405811
  

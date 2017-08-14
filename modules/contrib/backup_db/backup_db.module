@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\StreamWrapper\PrivateStream;
+use Drupal\backup_db\Adapter\BackupDatabaseLocalAdapter;
 
 /**
  * Inserts an export entry.
@@ -42,7 +43,7 @@ function backup_db_history_delete($id) {
     ->execute();
 
   // Remove file and managed entry.
-  return file_delete($fid);
+  return file_delete($id);
 }
 
 /**
@@ -93,16 +94,20 @@ function backup_db_cron() {
     $next = Drupal::state()->get('backup_db.cron_next_backup') ? : $expires + $interval;
 
     if (REQUEST_TIME > $next) {
-      $backup = new \Drupal\backup_db\BackupDatabaseLocal();
-      $backup->init();
+      $client = \Drupal::service('backup_db.client');
 
+      // Use the local adapter for cron export.
+      $handler = new BackupDatabaseLocalAdapter($client);
+      $handler->export();
+
+      /* @todo, error handler
       if (!$backup->error()) {
         drupal_set_message(t('Backup has been successfully completed.'), 'status');
         Drupal::state()->set('backup_db.cron_next_backup', REQUEST_TIME + $interval);
       }
       else {
         drupal_set_message(t('Backup has failed, please review recent log messages.'), 'warning');
-      }
+      }*/
     }
 
     Drupal::state()->set('backup_db.cron_last_run', REQUEST_TIME);

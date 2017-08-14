@@ -7,10 +7,12 @@
 
 namespace Drupal\backup_db\Form;
 
-use Drupal\backup_db\BackupDatabaseLocal;
-use Drupal\backup_db\BackupDatabaseRemote;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\FormBase;
+
+use Drupal\backup_db\Adapter\BackupDatabaseLocalAdapter;
+use Drupal\backup_db\Adapter\BackupDatabaseRemoteAdapter;
+use Drupal\backup_db\Adapter\BackupDatabaseS3Adapter;
 
 /**
  * BackupDatabaseForm class.
@@ -46,6 +48,7 @@ class BackupDatabaseForm extends FormBase {
       '#options' => array(
         'local' => $this->t('Local'),
         'download' => $this->t('Download')
+        // 'aws' => $this->t('AWS S3')
       ),
       '#description' => $this->t('Export backup to local server or download.'),
       '#default_value' => 'download'
@@ -72,14 +75,20 @@ class BackupDatabaseForm extends FormBase {
       ->set('filename', $values['filename'])
       ->save();
 
-    // Export database.
-    $backup = new BackupDatabaseLocal();
-    if ($values['type'] == 'download') {
-      $backup = new BackupDatabaseRemote();
-    }
-    $backup->init();
+    // Call backup_db client.
+    $client = \Drupal::service('backup_db.client');
 
-    if (!$backup->error()) {
+    // Select our adapter.
+    if ($values['type'] == 'download') {
+      $handler = new BackupDatabaseRemoteAdapter($client);
+    }
+
+    if ($values['type'] == 'local') {
+      $handler = new BackupDatabaseLocalAdapter($client);
+    }
+
+    // Run the export.
+    if ($handler->export()) {
       drupal_set_message(t('Backup has been successfully completed.'), 'status');
     }
     else {
