@@ -10,16 +10,29 @@ This module depends upon Composer Manager to install the mysqldump-php library; 
 
 Installation (@ref, http://cgit.drupalcode.org/address/tree/README.md)
 
-1. Download [composer_manager](https://drupal.org/project/composer_manager) into your
-   `modules` directory.
+1. cd / navigate to the Drupal root directory
 
-2. From the Drupal root directory, initialize composer_manager, and run it for the first time:
-php modules/composer_manager/scripts/init.php
-composer drupal-update
+2. add the Drupal Packagist repository
+   ``
+   composer config repositories.drupal composer https://packages.drupal.org/8
+   ``
 
-This will download the required libraries into the root vendor/ directory.
+3. use composer to download the module and it's dependencies
+  ``
+  composer require drupal/backup_db
+  ``
 
-3. Enable the Backup Database module.
+4. enable the Backup Database module.
+
+Manual usage
+
+1. $client = \Drupal::service('backup_db.client');
+2. Do client things (update settings, set new connection)
+   $client->setConnection();
+3. Select our adapter (AWS)
+   $handler = new BackupDatabaseS3Adapter($client);
+4. Do the magic
+   $handler->export();
 
 More information
  - https://www.drupal.org/node/2405811

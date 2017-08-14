@@ -6,7 +6,13 @@ package: Development
 tags:
  - developer
 # Information added by Drupal.org packaging script on 2016-02-19
-version: '8.x-1.0'
+# version: '8.x-1.0'
+# core: '8.x'
+# project: 'backup_db'
+# datestamp: 1455870863
+
+# Information added by Drupal.org packaging script on 2017-04-20
+version: '8.x-1.1'
 core: '8.x'
 project: 'backup_db'
-datestamp: 1455870863
+datestamp: 1492725847
