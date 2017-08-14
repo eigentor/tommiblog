@@ -10,7 +10,7 @@ dependencies:
     - tommiblog
 id: tommiblog_footer
 theme: tommiblog
-region: '-1'
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
