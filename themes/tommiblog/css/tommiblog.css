@@ -1,78 +1,604 @@
-/*
-Error: Mixin breakpoint doesn't have an argument named $no_query.
-        on line 64 of sass/_node.sass, in `breakpoint'
-        from line 64 of sass/_node.sass
-        from line 7 of sass/tommiblog.sass
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-Backtrace:
-sass/_node.sass:64:in `breakpoint'
-sass/_node.sass:64
-sass/tommiblog.sass:7
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:33:in `perform_arguments'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:361:in `block in visit_mixin'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Program Files (x86)/Entwicklung/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Mixin breakpoint doesn't have an argument named $no_query.\A         on line 64 of sass/_node.sass, in `breakpoint'\A         from line 64 of sass/_node.sass\A         from line 7 of sass/tommiblog.sass"; }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  color: #444;
+  font-family: source_sans_proregular, arial, helvetica, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.002em;
+  line-height: 1.6; }
+
+/* Headlines */
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h4 a, h6 a {
+  font-family: oswaldbook, arial, helvetica, sans-serif;
+  font-weight: normal;
+  color: #555;
+  letter-spacing: 0.01em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.3; }
+
+#block-tommiblog-branding {
+  margin-top: 15px; }
+  #block-tommiblog-branding a[title=Startseite] {
+    font-family: maiden_orangeregular, times, serif;
+    font-weight: normal;
+    font-size: 54px;
+    font-size: 3rem;
+    color: #ca0d0d;
+    line-height: 1;
+    margin-bottom: 0; }
+
+/*** Standard HTML Elements ** */
+a {
+  color: #CA0D0D;
+  text-decoration: none; }
+  a:hover {
+    color: #CA0D0D; }
+
+/** Drupal-specific Elements */
+code {
+  margin-bottom: 10px; }
+
+.submitted {
+  color: #999;
+  font-family: oswaldlight, arial, helvetica, sans-serif;
+  font-size: 14.94px;
+  font-size: 0.83rem;
+  margin: 5px 0 9px; }
+
+/** Drupal-specific micro elements */
+a.feed-icon {
+  display: none; }
+
+ul.links.inline li {
+  padding: 0 10px 0 0;
+  font-size: 14.94px;
+  font-size: 0.83rem; }
+
+p {
+  margin: 5px 0 12px; }
+
+input.form-text {
+  border: 1px solid #aaa;
+  padding: 2px 5px; }
+
+div[role="contentinfo"] {
+  background: no-repeat 10px 17px;
+  border: 1px solid;
+  border-width: 1px 1px 1px 0;
+  border-radius: 2px;
+  padding: 15px 20px 15px 35px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-top: 30px;
+  margin-bottom: 10px; }
+
+div[aria-label="Statusmeldung"] {
+  color: #325e1c;
+  background-color: #f3faef;
+  border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
+  background-image: url(../../../core/misc/icons/73b355/check.svg);
+  border-left: 6px solid #77b259; }
+
+/* Messages Styling */
+/**
+ * @file
+ * Styles for system messages.
+ * @TODO: Diese Styles auf die neuen Selektoren uebertragen, wie f├╝r die Statusmeldung schon gemacht.
+ */
+.messages {
+  background: no-repeat 10px 17px;
+  border: 1px solid;
+  border-width: 1px 1px 1px 0;
+  border-radius: 2px;
+  padding: 15px 20px 15px 35px;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
+
+[dir="rtl"] .messages {
+  border-width: 1px 0 1px 1px;
+  background-position: right 10px top 17px;
+  padding-left: 20px;
+  padding-right: 35px;
+  text-align: right; }
+
+.messages + .messages {
+  margin-top: 1.538em; }
+
+.messages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.messages__item + .messages__item {
+  margin-top: 0.769em; }
+
+/* See .color-success in Seven's colors.css */
+.messages--status {
+  color: #325e1c;
+  background-color: #f3faef;
+  border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
+  background-image: url(../../../core/misc/icons/73b355/check.svg);
+  box-shadow: -8px 0 0 #77b259; }
+
+[dir="rtl"] .messages--status {
+  border-color: #c9e1bd transparent #c9e1bd #c9e1bd;
+  box-shadow: 8px 0 0 #77b259;
+  margin-left: 0; }
+
+/* See .color-warning in Seven's colors.css */
+.messages--warning {
+  background-color: #fdf8ed;
+  background-image: url(../../../core/misc/icons/e29700/warning.svg);
+  border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
+  color: #734c00;
+  box-shadow: -8px 0 0 #e09600; }
+
+[dir="rtl"] .messages--warning {
+  border-color: #f4daa6 transparent #f4daa6 #f4daa6;
+  box-shadow: 8px 0 0 #e09600; }
+
+/* See .color-error in Seven's colors.css */
+.messages--error {
+  background-color: #fcf4f2;
+  color: #a51b00;
+  background-image: url(../../../core/misc/icons/e32700/error.svg);
+  border-color: #f9c9bf #f9c9bf #f9c9bf transparent;
+  box-shadow: -8px 0 0 #e62600; }
+
+[dir="rtl"] .messages--error {
+  border-color: #f9c9bf transparent #f9c9bf #f9c9bf;
+  box-shadow: 8px 0 0 #e62600; }
+
+.messages--error p.error {
+  color: #a51b00; }
+
+/* Primary Tabs */
+#block-tommiblog-local-tasks ul {
+  padding: 0; }
+  #block-tommiblog-local-tasks ul li {
+    display: inline; }
+    #block-tommiblog-local-tasks ul li a {
+      background: #e9e9e9;
+      display: inline-block;
+      padding: 1px 10px;
+      margin-right: 7px; }
+      #block-tommiblog-local-tasks ul li a:hover {
+        background: #d5d5d5; }
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- Phablet LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media only screen and (min-width: 480px) {
+  body #block-tommiblog-branding a[title=Startseite] {
+    font-size: 81px;
+    font-size: 4.5rem; } }
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- DESKTOP LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media only screen and (min-width: 960px) {
+  body {
+    /* Headlines */ }
+    body h2 {
+      font-size: 34.2px;
+      font-size: 1.9rem; }
+    body article h2 {
+      margin-bottom: 2px; }
+    body #block-tommiblog-branding a[title=Startseite] {
+      font-size: 108px;
+      font-size: 6rem;
+      margin-left: -5px; }
+    body .imagefloatleft {
+      float: left;
+      margin: 5px 15px 0 0; }
+    body .imagefloatright {
+      float: right;
+      margin: 5px 0 0 15px; } }
+
+/** Base layout of the page */
+body {
+  background: #fffdf9; }
+
+#block-tommiblog-search, #block-suchformular {
+  margin-top: 30px;
+  margin-bottom: 15px; }
+  #block-tommiblog-search:after, #block-suchformular:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #block-tommiblog-search .form-item-keys, #block-suchformular .form-item-keys {
+    float: left; }
+  #block-tommiblog-search #edit-actions, #block-suchformular #edit-actions {
+    float: left; }
+  #block-tommiblog-search form, #block-suchformular form {
+    width: 90%; }
+  #block-tommiblog-search input.form-search, #block-suchformular input.form-search {
+    -webkit-border-radius: 13px 0 0 13px;
+    -moz-border-radius: 13px 0 0 13px;
+    -ms-border-radius: 13px 0 0 13px;
+    -o-border-radius: 13px 0 0 13px;
+    border-radius: 13px 0 0 13px;
+    border: 1px solid #999;
+    margin-right: 0;
+    float: left;
+    height: 28px;
+    width: 70%;
+    padding: 2px 8px 2px 15px; }
+  #block-tommiblog-search input.form-submit, #block-suchformular input.form-submit {
+    position: relative;
+    text-indent: -9999px;
+    -webkit-border-radius: 0 13px 13px 0;
+    -moz-border-radius: 0 13px 13px 0;
+    -ms-border-radius: 0 13px 13px 0;
+    -o-border-radius: 0 13px 13px 0;
+    border-radius: 0 13px 13px 0;
+    border: 1px solid #777;
+    width: 15%;
+    float: left;
+    padding: 2px 5px;
+    height: 28px;
+    border-left: 0;
+    background: #eee url(../images/lupe-suche.png) no-repeat 8px center; }
+    #block-tommiblog-search input.form-submit:hover, #block-suchformular input.form-submit:hover {
+      background: #ddd url(../images/lupe-suche.png) no-repeat 8px center; }
+
+.l-container {
+  margin: 0;
+  padding: 0; }
+
+#block-tommiblog-branding {
+  float: right;
+  width: 80%;
+  text-align: center; }
+
+.region-header {
+  float: left; }
+
+.mobile-navigation {
+  padding-left: 6%;
+  padding-top: 5px;
+  float: left;
+  width: 250px;
+  background: #fcf4dd;
+  background: #444;
+  height: 100%;
+  display: block;
+  display: none;
+  -moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.5);
+  -webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.5);
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.5); }
+  .mobile-navigation #block-socialmediablockheader-2 p {
+    margin: 0; }
+  .mobile-navigation #block-socialmediablockheader-2 img {
+    width: 48px;
+    height: auto; }
+  .mobile-navigation #block-socialmediablockheader-2 a {
+    display: inline-block;
+    margin-right: 13px; }
+  .mobile-navigation ul.menu {
+    margin-left: 0; }
+    .mobile-navigation ul.menu li a {
+      display: block;
+      border-bottom: 1px solid #ccc;
+      padding: 3px 0;
+      color: #bbb; }
+      .mobile-navigation ul.menu li a:hover {
+        color: #CA0D0D; }
+  .mobile-navigation #block-tommiblog-search, .mobile-navigation #block-suchformular {
+    margin-top: 35px;
+    margin-bottom: 25px; }
+    .mobile-navigation #block-tommiblog-search input.form-search, .mobile-navigation #block-suchformular input.form-search {
+      background: #bbb;
+      color: #000; }
+    .mobile-navigation #block-tommiblog-search input.form-submit, .mobile-navigation #block-suchformular input.form-submit {
+      background: #eaeaea url(../images/lupe-suche.png) no-repeat 5px center; }
+      .mobile-navigation #block-tommiblog-search input.form-submit:hover, .mobile-navigation #block-suchformular input.form-submit:hover {
+        background: #fff url(../images/lupe-suche.png) no-repeat 5px center; }
+
+/* float all major containers left when the mobile menu is open */
+.mobile-menu-open header, .mobile-menu-open main, .mobile-menu-open footer[role=contentinfo] {
+  float: left; }
+.mobile-menu-open .mobile-navigation {
+  display: block;
+  position: absolute;
+  z-index: 15; }
+  .mobile-menu-open .mobile-navigation #block-mobilemenuswitcher-2 {
+    width: 40px;
+    height: 35px;
+    padding: 5px;
+    background: #bbb url(../images/menu-icon-mobilemenu.png) no-repeat center center;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 18px; }
+
+header, main, footer[role=contentinfo] {
+  max-width: 1006px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px; }
+
+.header-background {
+  background: #fbf0cf;
+  border-bottom: 1px solid #EDE2C4;
+  padding: 5px 0 8px; }
+  .header-background:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+header #block-tommiblog-search, header #block-socialmediablockheader, header #block-tommiblog-main-menu {
+  display: none;
+  clear: left;
+  border: 1px solid transparent; }
+header #block-mobilemenuswitcher {
+  width: 40px;
+  height: 35px;
+  padding: 5px;
+  background: #F7E19E url(../images/menu-icon.png) no-repeat center center;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  float: right;
+  margin-top: 18px; }
+header #block-tommiblog-main-menu ul {
+  margin-left: 0;
+  margin-bottom: 25px; }
+  header #block-tommiblog-main-menu ul li {
+    list-style: none;
+    list-style-image: none;
+    padding-top: 0.2em; }
+    header #block-tommiblog-main-menu ul li a {
+      padding: 5px 8px;
+      border: 1px solid #ccc;
+      background: #F7E19E;
+      display: block; }
+
+main {
+  padding-top: 30px;
+  min-height: 550px; }
+
+.footer-wrapper {
+  background: #EDE9E3;
+  border-top: 1px solid #d8d8d8;
+  padding-bottom: 15px; }
+  .footer-wrapper a {
+    color: #777; }
+  .footer-wrapper footer {
+    font-size: 14.94px;
+    font-size: 0.83rem;
+    padding-top: 10px; }
+    .footer-wrapper footer ul.menu {
+      margin-left: 0; }
+
+/* Login-Formular */
+.page-user form#user-login-form input {
+  width: 100%; }
+
+/* Kommentare */
+#comments .comment {
+  background: #eee;
+  padding: 25px;
+  margin: 25px 0;
+  border: 1px solid #ddd; }
+
+#comment-form {
+  background: #e7e7e7;
+  padding: 25px;
+  margin: 25px 0; }
+  #comment-form #edit-name {
+    display: none; }
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- Phablet LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media only screen and (min-width: 480px) {
+  body .layout-container {
+    position: relative;
+    min-height: 100%; }
+  body #block-tommiblog-branding {
+    text-align: left; }
+  body header #block-mobilemenuswitcher {
+    margin-top: 33px;
+    margin-left: 15px; }
+  body .mobile-navigation {
+    padding-top: 20px; } }
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- DESKTOP LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media only screen and (min-width: 960px) {
+  body {
+    /* Footer */ }
+    body .layout-container {
+      padding-bottom: 90px;
+      min-height: 100%; }
+    body header, body main, body footer[role=contentinfo] {
+      margin: 0 auto;
+      max-width: auto;
+      width: 1006px;
+      padding-left: 40px;
+      padding-right: 40px; }
+    body div[role="contentinfo"] {
+      margin: 0 auto;
+      max-width: auto;
+      width: 926px;
+      margin-top: 30px;
+      margin-bottom: 10px; }
+    body header:after {
+      content: "";
+      display: table;
+      clear: both; }
+    body header #block-tommiblog-branding {
+      width: auto;
+      float: left;
+      margin-right: 35px; }
+    body header .region-header {
+      float: left; }
+    body header .block {
+      float: left; }
+    body header #block-tommiblog-search, body header #block-socialmediablockheader, body header #block-tommiblog-main-menu {
+      display: block;
+      clear: none;
+      float: left;
+      border: 0; }
+    body header #block-socialmediablockheader {
+      margin-top: 25px;
+      margin-right: 10px; }
+      body header #block-socialmediablockheader img {
+        margin: 0 5px;
+        width: auto; }
+      body header #block-socialmediablockheader p {
+        margin: 0; }
+      body header #block-socialmediablockheader span.rufzeichen {
+        margin: 0; }
+    body header #block-mobilemenuswitcher {
+      display: none; }
+    body header #block-tommiblog-main-menu ul {
+      padding-left: 0; }
+      body header #block-tommiblog-main-menu ul li {
+        font-family: oswaldbook, arial, helvetica, sans-serif;
+        font-size: 21.6px;
+        font-size: 1.2rem;
+        line-height: 1.3; }
+        body header #block-tommiblog-main-menu ul li a {
+          color: #888;
+          background: none;
+          border: none;
+          padding: 0; }
+    body header #block-tommiblog-search {
+      margin-top: 0; }
+      body header #block-tommiblog-search form {
+        margin-top: 45px;
+        margin-left: 30px; }
+        body header #block-tommiblog-search form input.form-search {
+          width: 110px; }
+      body header #block-tommiblog-search input.form-search {
+        width: 80%;
+        padding: 2px 8px 2px 15px; }
+      body header #block-tommiblog-search input.form-submit {
+        width: 38px; }
+    body .footer-wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 90px; }
+      body .footer-wrapper #block-footermessage {
+        float: left; }
+      body .footer-wrapper #block-tommiblog-footer {
+        float: right; }
+      body .footer-wrapper footer ul.menu, body .footer-wrapper footer p {
+        margin-top: 15px; }
+      body .footer-wrapper footer ul.menu li {
+        padding-top: 0; }
+    body.page-user form#user-login-form label {
+      float: left;
+      width: 130px; }
+    body.page-user form#user-login-form input {
+      width: auto; }
+      body.page-user form#user-login-form input#edit-submit {
+        margin-left: 130px; }
+    body.page-user form#user-login-form .description {
+      margin-left: 130px;
+      color: #777;
+      margin-top: 2px;
+      font-size: 13.5px;
+      font-size: 0.75rem; }
+    body #comments .comment, body #comment-form {
+      margin-left: -25px;
+      margin-right: -25px; } }
+
+.node:after {
+  content: "";
+  display: table;
+  clear: both; }
+.node .field-node--body:after {
+  content: "";
+  display: table;
+  clear: both; }
+.node .field-node--body img {
+  max-width: 100%;
+  height: auto; }
+.node .field-node--field-image img {
+  max-width: 100%;
+  height: auto; }
+.node .field-node--field-tags {
+  margin-bottom: 20px; }
+  .node .field-node--field-tags .field-item {
+    display: inline-block; }
+    .node .field-node--field-tags .field-item a {
+      color: #777;
+      font-size: 13.5px;
+      font-size: 0.75rem;
+      margin: 0 10px 0 0;
+      padding: 2px 0.5em;
+      border: 1px dotted #aaa;
+      line-height: 1.3; }
+      .node .field-node--field-tags .field-item a:hover {
+        color: #CA0D0D;
+        border: 1px dotted #CA0D0D; }
+.node .field-node--field-separator-dummy {
+  height: 0;
+  line-height: 0; }
+.node iframe {
+  max-width: 100%; }
+
+.view-frontpage .views-row {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #bbb; }
+  .view-frontpage .views-row ul.links.inline {
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 0; }
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- DESKTOP LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media only screen and (min-width: 960px) {
+  body .node:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body .node .submitted {
+    float: left; }
+  body .node .field-node--field-tags {
+    float: right; }
+  body .node .field-node--field-separator-dummy {
+    clear: both; }
+  body .field-node--field-tags {
+    margin-bottom: 5px; }
+    body .field-node--field-tags .field-item a {
+      margin: 0 0 0 10px; }
+  body .field-node--field-image {
+    clear: both;
+    float: left;
+    margin: 5px 15px 0 0; } }
+
+/*# sourceMappingURL=tommiblog.css.map */

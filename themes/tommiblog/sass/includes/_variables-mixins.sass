@@ -21,9 +21,10 @@ $desktop-grid-padding: 40px
 $smartphone-grid-padding: 20px
 
 @mixin clearfix
-  content: ""
-  display: table
-  clear: both
+  &:after
+    content: ""
+    display: table
+    clear: both
 
 
 @mixin container-mobile
