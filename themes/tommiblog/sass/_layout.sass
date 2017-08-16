@@ -1,4 +1,4 @@
-@import "_variables-mixins.sass"
+@import "includes/_variables-mixins"
 
 // Set the behaviour of our IE8-Fallback.
 // Default to write it into the same file with an extra
@@ -13,7 +13,7 @@ body
 #block-tommiblog-search, #block-suchformular
   margin-top: 30px
   margin-bottom: 15px
-  +legacy-pie-clearfix
+  +clearfix
   .form-item-keys
     float: left
   #edit-actions
@@ -117,7 +117,7 @@ header, main, footer[role=contentinfo]
   background: lighten(#F7E1A0, 10%)
   border-bottom: 1px solid #EDE2C4
   padding: 5px 0 8px
-  @include legacy-pie-clearfix
+  +clearfix
 
 header 
   #block-tommiblog-search, #block-socialmediablockheader, #block-tommiblog-main-menu
@@ -221,7 +221,7 @@ body
 
 
 body
-  +breakpoint($breakpoint-desktop-with-ie-fallback, $no-query: '.lt-ie9')
+  +breakpoint($breakpoint-desktop)
     .layout-container
       padding-bottom: 90px
       min-height: 100%
@@ -232,7 +232,7 @@ body
       margin-top: 30px
       margin-bottom: 10px
     header
-      +legacy-pie-clearfix
+      +clearfix
       //padding-top: 20px
       #block-tommiblog-branding
         width: auto 

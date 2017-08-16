@@ -1,4 +1,4 @@
-@import "_variables-mixins.sass"
+@import "includes/_variables-mixins"
 
 // Set the behaviour of our IE8-Fallback.
 // Default to write it into the same file with an extra
@@ -7,9 +7,9 @@ $breakpoint-no-queries: false
 $breakpoint-no-query-fallbacks: true
 
 .node
-  +legacy-pie-clearfix
+  +clearfix
   .field-node--body 
-    +legacy-pie-clearfix
+    +clearfix
     img 
       max-width: 100%
       height: auto
@@ -61,10 +61,10 @@ $breakpoint-no-query-fallbacks: true
 
 
 body
-  +breakpoint($breakpoint-desktop-with-ie-fallback, $no-query: '.lt-ie9')
+  +breakpoint($breakpoint-desktop, $no-query: '.lt-ie9')
 
     .node 
-      +legacy-pie-clearfix
+      +clearfix
       .submitted 
         float: left
       .field-node--field-tags 

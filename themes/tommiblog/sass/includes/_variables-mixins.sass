@@ -1,0 +1,83 @@
+/////////////////////////////////////
+
+// Font Properties
+$base-font-size: 15px
+$base-line-height: 1.6
+
+// Font Families
+$font-family-main: source_sans_proregular,arial,helvetica,sans-serif
+$font-family-headlines: oswaldbook,arial,helvetica,sans-serif
+// $font-family-headlines: maiden_orangeregular,arial,helvetica,sans-serif
+$font-family-headlines-thin: oswaldlight,arial,helvetica,sans-serif
+$font-family-handwritten: vag-handwrittenregular,times,serif
+$font-family-sitetitle: maiden_orangeregular,times,serif
+
+
+///////////////////// Mixins //////////////////////
+
+
+// Define Padding vor Desktop and mobile
+$desktop-grid-padding: 40px
+$smartphone-grid-padding: 20px
+
+@mixin clearfix
+  content: ""
+  display: table
+  clear: both
+
+
+@mixin container-mobile
+  max-width: 1006px
+  margin: 0 auto
+  padding-right: $smartphone-grid-padding
+  padding-left: $smartphone-grid-padding
+
+@mixin container-desktop
+  margin: 0 auto
+  max-width: auto 
+  width: 1006px
+  padding-left: $desktop-grid-padding 
+  padding-right: $desktop-grid-padding
+
+@mixin container-desktop-inward
+  margin: 0 auto
+  max-width: auto
+  width: 1006px - ($desktop-grid-padding * 2)
+  
+@mixin border-radius($radius) 
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+
+@mixin box-shadow($shadow) 
+  -moz-box-shadow: $shadow
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+
+
+@mixin hyphens 
+  -moz-hyphens: auto
+  -o-hyphens: auto
+  -webkit-hyphens: auto
+  -ms-hyphens: auto
+  hyphens: auto
+
+
+// Breakpoints
+$breakpoint-small-smartphone: 240px
+$breakpoint-phablet: 480px
+$breakpoint-tablet: 768px
+$breakpoint-desktop: 960px
+
+
+
+
+
+
+
+
+
+

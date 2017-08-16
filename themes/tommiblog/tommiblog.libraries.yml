@@ -11,9 +11,7 @@ global-styling:
       font_face/colaborate/colaborate_regular/colaborate-regular.css: {}
       font_face/maidenorange/maidenorange.css: {}
       font_face/glyphicons/glyphicons.css: {}
-      css/layout.css: {}
-      css/base.css: {}
-      css/node.css: {}
+      css/tommiblog.css: {}
 
 mobile-menu:
   version: VERSION
