@@ -557,8 +557,7 @@ main {
   clear: both; }
 .node .node__content .field--name-field-tags {
   float: right;
-  margin-top: -1.5em;
-  margin-bottom: 0.5;
+  margin-top: -1.4em;
   margin-right: 0.8em; }
   .node .node__content .field--name-field-tags:after {
     content: "";
@@ -588,13 +587,12 @@ main {
       content: "";
       line-height: 0;
       z-index: -2; }
-.node .field-node--body:after {
-  content: "";
-  display: table;
-  clear: both; }
-.node .field-node--body img {
-  max-width: 100%;
-  height: auto; }
+.node .field--name-body {
+  padding-top: 0.5em; }
+  .node .field--name-body:after {
+    content: "";
+    display: table;
+    clear: both; }
 .node .field-node--field-image {
   clear: both; }
   .node .field-node--field-image img {
@@ -631,6 +629,8 @@ main {
     display: block;
     margin-top: -5px;
     margin-bottom: 0; }
+.view-frontpage .node .node__content .field--name-body {
+  padding-top: 0.3em; }
 
 /*------------------------------------------- */
 /*------------------------------------------- */
@@ -658,13 +658,13 @@ main {
     clear: both; }
   body .view-frontpage .node .field--name-field-image {
     float: left;
-    margin: 5px 15px 5px 0; }
+    margin: 0.8em 15px 5px 0; }
   body.page-node-type-article .node .node__content:after {
     content: "";
     display: table;
     clear: both; }
   body.page-node-type-article .node .node__content .field--name-field-image {
     float: left;
-    margin: 5px 15px 5px 0; } }
+    margin: 1em 15px 5px 0; } }
 
 /*# sourceMappingURL=tommiblog.css.map */

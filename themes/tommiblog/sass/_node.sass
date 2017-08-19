@@ -5,8 +5,7 @@
     .field--name-field-tags
       +clearfix
       float: right
-      margin-top: -1.5em
-      margin-bottom: 0.5
+      margin-top: -1.4em
       margin-right: 0.8em
       .field__item
         float: left
@@ -31,11 +30,9 @@
           content: ''
           line-height: 0
           z-index: -2
-  .field-node--body 
+  .field--name-body
     +clearfix
-    img 
-      max-width: 100%
-      height: auto
+    padding-top: 0.5em
   .field-node--field-image
     clear: both
     img 
@@ -75,6 +72,10 @@
       display: block
       margin-top: -5px
       margin-bottom: 0
+  .node
+    .node__content
+      .field--name-body
+        padding-top: 0.3em
           
 
 
@@ -108,7 +109,7 @@ body
           +clearfix
         .field--name-field-image
           float: left
-          margin: 5px 15px 5px 0
+          margin: 0.8em 15px 5px 0
 
     &.page-node-type-article
       .node
@@ -116,4 +117,4 @@ body
           +clearfix
           .field--name-field-image
             float: left
-            margin: 5px 15px 5px 0
+            margin: 1em 15px 5px 0
