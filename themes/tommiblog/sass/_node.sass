@@ -1,11 +1,43 @@
 .node
   +clearfix
+  .node__content
+    +clearfix
+    .field--name-field-tags
+      +clearfix
+      float: right
+      margin-top: -1.5em
+      margin-bottom: 0.5
+      margin-right: 0.8em
+      .field__item
+        float: left
+        +x-rem(font-size, 0.75)
+        position: relative
+        padding-left: 0.6em
+        padding-right: 0
+        margin-left: 2em
+        line-height: 20px
+        a
+          color: #777
+          &:hover
+            color: $link-color
+        &:after
+          border: 10px solid #eee
+          border-left: 5px solid white
+          position: absolute
+          left: -0.5em
+          top: 0
+          width: 100%
+          display: block
+          content: ''
+          line-height: 0
+          z-index: -2
   .field-node--body 
     +clearfix
     img 
       max-width: 100%
       height: auto
   .field-node--field-image
+    clear: both
     img 
       max-width: 100%
       height: auto
@@ -32,7 +64,9 @@
   iframe 
     max-width: 100%
 
-.view-frontpage 
+.view-frontpage
+  h2
+    margin-bottom: 8px
   .views-row 
     margin-bottom: 15px
     padding-bottom: 20px
@@ -63,13 +97,23 @@ body
         float: right
       .field-node--field-separator-dummy 
         clear: both
-    .field-node--field-tags
-      margin-bottom: 5px
-      .field-item 
-        a
-          margin: 0 0 0 10px
 
     .field-node--field-image 
       clear: both
       float: left
       margin: 5px 15px 0 0
+    .view-frontpage
+      .node
+        .node__content
+          +clearfix
+        .field--name-field-image
+          float: left
+          margin: 5px 15px 5px 0
+
+    &.page-node-type-article
+      .node
+        .node__content
+          +clearfix
+          .field--name-field-image
+            float: left
+            margin: 5px 15px 5px 0

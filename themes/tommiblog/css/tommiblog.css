@@ -67,6 +67,10 @@ ul.links.inline li {
 p {
   margin: 5px 0 12px; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 input.form-text {
   border: 1px solid #aaa;
   padding: 2px 5px; }
@@ -162,6 +166,11 @@ div[aria-label="Statusmeldung"] {
 .messages--error p.error {
   color: #a51b00; }
 
+.node__submitted {
+  font-size: 14.4px;
+  font-size: 0.8rem;
+  color: #999; }
+
 /* Primary Tabs */
 #block-tommiblog-local-tasks ul {
   padding: 0; }
@@ -220,6 +229,10 @@ body {
     content: "";
     display: table;
     clear: both; }
+  #block-tommiblog-search input, #block-suchformular input {
+    box-sizing: border-box; }
+  #block-tommiblog-search .form-item, #block-suchformular .form-item {
+    margin: 0; }
   #block-tommiblog-search .form-item-keys, #block-suchformular .form-item-keys {
     float: left; }
   #block-tommiblog-search #edit-actions, #block-suchformular #edit-actions {
@@ -301,6 +314,8 @@ body {
   .mobile-navigation #block-tommiblog-search, .mobile-navigation #block-suchformular {
     margin-top: 35px;
     margin-bottom: 25px; }
+    .mobile-navigation #block-tommiblog-search .form-item, .mobile-navigation #block-suchformular .form-item {
+      margin: 0; }
     .mobile-navigation #block-tommiblog-search input.form-search, .mobile-navigation #block-suchformular input.form-search {
       background: #bbb;
       color: #000; }
@@ -536,6 +551,43 @@ main {
   content: "";
   display: table;
   clear: both; }
+.node .node__content:after {
+  content: "";
+  display: table;
+  clear: both; }
+.node .node__content .field--name-field-tags {
+  float: right;
+  margin-top: -1.5em;
+  margin-bottom: 0.5;
+  margin-right: 0.8em; }
+  .node .node__content .field--name-field-tags:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .node .node__content .field--name-field-tags .field__item {
+    float: left;
+    font-size: 13.5px;
+    font-size: 0.75rem;
+    position: relative;
+    padding-left: 0.6em;
+    padding-right: 0;
+    margin-left: 2em;
+    line-height: 20px; }
+    .node .node__content .field--name-field-tags .field__item a {
+      color: #777; }
+      .node .node__content .field--name-field-tags .field__item a:hover {
+        color: #CA0D0D; }
+    .node .node__content .field--name-field-tags .field__item:after {
+      border: 10px solid #eee;
+      border-left: 5px solid white;
+      position: absolute;
+      left: -0.5em;
+      top: 0;
+      width: 100%;
+      display: block;
+      content: "";
+      line-height: 0;
+      z-index: -2; }
 .node .field-node--body:after {
   content: "";
   display: table;
@@ -543,9 +595,11 @@ main {
 .node .field-node--body img {
   max-width: 100%;
   height: auto; }
-.node .field-node--field-image img {
-  max-width: 100%;
-  height: auto; }
+.node .field-node--field-image {
+  clear: both; }
+  .node .field-node--field-image img {
+    max-width: 100%;
+    height: auto; }
 .node .field-node--field-tags {
   margin-bottom: 20px; }
   .node .field-node--field-tags .field-item {
@@ -567,6 +621,8 @@ main {
 .node iframe {
   max-width: 100%; }
 
+.view-frontpage h2 {
+  margin-bottom: 8px; }
 .view-frontpage .views-row {
   margin-bottom: 15px;
   padding-bottom: 20px;
@@ -592,13 +648,23 @@ main {
     float: right; }
   body .node .field-node--field-separator-dummy {
     clear: both; }
-  body .field-node--field-tags {
-    margin-bottom: 5px; }
-    body .field-node--field-tags .field-item a {
-      margin: 0 0 0 10px; }
   body .field-node--field-image {
     clear: both;
     float: left;
-    margin: 5px 15px 0 0; } }
+    margin: 5px 15px 0 0; }
+  body .view-frontpage .node .node__content:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body .view-frontpage .node .field--name-field-image {
+    float: left;
+    margin: 5px 15px 5px 0; }
+  body.page-node-type-article .node .node__content:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body.page-node-type-article .node .node__content .field--name-field-image {
+    float: left;
+    margin: 5px 15px 5px 0; } }
 
 /*# sourceMappingURL=tommiblog.css.map */
