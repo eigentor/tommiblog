@@ -1,0 +1,19 @@
+uuid: fbdd667f-cb6c-4d0c-b4da-412db7d0231e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.article
+id: node.article.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: article
+label: Untertitel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
