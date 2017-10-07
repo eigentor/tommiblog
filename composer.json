@@ -5,10 +5,11 @@
     "license": "GPL-2.0+",
     "require": {
         "composer/installers": "^1.0.24",
-        "wikimedia/composer-merge-plugin": "~1.4"
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "drupal/stage_file_proxy": "^1.0@alpha"
     },
     "replace": {
-        "drupal/core": "~8.3"
+        "drupal/core": "^8.4"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
