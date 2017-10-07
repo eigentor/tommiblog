@@ -17,7 +17,6 @@ use Symfony\Component\Validator\Constraints\Traverse;
 use Symfony\Component\Validator\Constraints\Valid;
 use Symfony\Component\Validator\Exception\ConstraintDefinitionException;
 use Symfony\Component\Validator\Exception\GroupDefinitionException;
-use Symfony\Component\Validator\ValidationVisitorInterface;
 
 /**
  * Default implementation of {@link ClassMetadataInterface}.
@@ -27,7 +26,7 @@ use Symfony\Component\Validator\ValidationVisitorInterface;
  * @author Bernhard Schussek <bschussek@gmail.com>
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
+class ClassMetadata extends GenericMetadata implements ClassMetadataInterface
 {
     /**
      * @var string
@@ -123,47 +122,6 @@ class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
             $this->defaultGroup = substr($class, $nsSep + 1);
         } else {
             $this->defaultGroup = $class;
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @deprecated since version 2.5, to be removed in 3.0.
-     */
-    public function accept(ValidationVisitorInterface $visitor, $value, $group, $propertyPath, $propagatedGroup = null)
-    {
-        @trigger_error('The '.__METHOD__.' method is deprecated since version 2.5 and will be removed in 3.0.', E_USER_DEPRECATED);
-
-        if (null === $propagatedGroup && Constraint::DEFAULT_GROUP === $group
-                && ($this->hasGroupSequence() || $this->isGroupSequenceProvider())) {
-            if ($this->hasGroupSequence()) {
-                $groups = $this->getGroupSequence()->groups;
-            } else {
-                $groups = $value->getGroupSequence();
-            }
-
-            foreach ($groups as $group) {
-                $this->accept($visitor, $value, $group, $propertyPath, Constraint::DEFAULT_GROUP);
-
-                if (count($visitor->getViolations()) > 0) {
-                    break;
-                }
-            }
-
-            return;
-        }
-
-        $visitor->visit($this, $value, $group, $propertyPath);
-
-        if (null !== $value) {
-            $pathPrefix = empty($propertyPath) ? '' : $propertyPath.'.';
-
-            foreach ($this->getConstrainedProperties() as $property) {
-                foreach ($this->getPropertyMetadata($property) as $member) {
-                    $member->accept($visitor, $member->getPropertyValue($value), $group, $pathPrefix.$property, $propagatedGroup);
-                }
-            }
         }
     }
 
@@ -320,6 +278,30 @@ class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
     }
 
     /**
+     * Adds a constraint to the getter of the given property.
+     *
+     * @param string     $property   The name of the property
+     * @param string     $method     The name of the getter method
+     * @param Constraint $constraint The constraint
+     *
+     * @return $this
+     */
+    public function addGetterMethodConstraint($property, $method, Constraint $constraint)
+    {
+        if (!isset($this->getters[$property])) {
+            $this->getters[$property] = new GetterMetadata($this->getClassName(), $property, $method);
+
+            $this->addPropertyMetadata($this->getters[$property]);
+        }
+
+        $constraint->addImplicitGroupName($this->getDefaultGroup());
+
+        $this->getters[$property]->addConstraint($constraint);
+
+        return $this;
+    }
+
+    /**
      * @param string       $property
      * @param Constraint[] $constraints
      *
@@ -329,6 +311,22 @@ class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
     {
         foreach ($constraints as $constraint) {
             $this->addGetterConstraint($property, $constraint);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string       $property
+     * @param string       $method
+     * @param Constraint[] $constraints
+     *
+     * @return $this
+     */
+    public function addGetterMethodConstraints($property, $method, array $constraints)
+    {
+        foreach ($constraints as $constraint) {
+            $this->addGetterMethodConstraint($property, $method, $constraint);
         }
 
         return $this;
@@ -346,10 +344,6 @@ class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
         }
 
         foreach ($source->getConstrainedProperties() as $property) {
-            if ($this->hasPropertyMetadata($property)) {
-                continue;
-            }
-
             foreach ($source->getPropertyMetadata($property) as $member) {
                 $member = clone $member;
 
@@ -374,52 +368,6 @@ class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
                 }
             }
         }
-    }
-
-    /**
-     * Adds a member metadata.
-     *
-     * @param MemberMetadata $metadata
-     *
-     * @deprecated since version 2.6, to be removed in 3.0.
-     */
-    protected function addMemberMetadata(MemberMetadata $metadata)
-    {
-        @trigger_error('The '.__METHOD__.' method is deprecated since version 2.6 and will be removed in 3.0. Use the addPropertyMetadata() method instead.', E_USER_DEPRECATED);
-
-        $this->addPropertyMetadata($metadata);
-    }
-
-    /**
-     * Returns true if metadatas of members is present for the given property.
-     *
-     * @param string $property The name of the property
-     *
-     * @return bool
-     *
-     * @deprecated since version 2.6, to be removed in 3.0. Use {@link hasPropertyMetadata} instead.
-     */
-    public function hasMemberMetadatas($property)
-    {
-        @trigger_error('The '.__METHOD__.' method is deprecated since version 2.6 and will be removed in 3.0. Use the hasPropertyMetadata() method instead.', E_USER_DEPRECATED);
-
-        return $this->hasPropertyMetadata($property);
-    }
-
-    /**
-     * Returns all metadatas of members describing the given property.
-     *
-     * @param string $property The name of the property
-     *
-     * @return MemberMetadata[] An array of MemberMetadata
-     *
-     * @deprecated since version 2.6, to be removed in 3.0. Use {@link getPropertyMetadata} instead.
-     */
-    public function getMemberMetadatas($property)
-    {
-        @trigger_error('The '.__METHOD__.' method is deprecated since version 2.6 and will be removed in 3.0. Use the getPropertyMetadata() method instead.', E_USER_DEPRECATED);
-
-        return $this->getPropertyMetadata($property);
     }
 
     /**
