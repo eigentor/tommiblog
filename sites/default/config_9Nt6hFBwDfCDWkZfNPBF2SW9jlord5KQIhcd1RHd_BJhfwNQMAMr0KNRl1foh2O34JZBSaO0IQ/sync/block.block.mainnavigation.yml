@@ -1,0 +1,24 @@
+uuid: 8ed7eb14-04af-4f32-92fd-7c637fbe1130
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - tommiblog
+id: mainnavigation
+theme: tommiblog
+region: navigation
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

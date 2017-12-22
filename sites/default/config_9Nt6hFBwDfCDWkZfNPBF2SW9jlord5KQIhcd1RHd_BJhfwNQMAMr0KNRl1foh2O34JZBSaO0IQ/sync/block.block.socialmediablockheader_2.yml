@@ -1,0 +1,25 @@
+uuid: 3fa6cf1b-fd1f-44e5-a356-b5e2cf882ef9
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d796c067-67c6-43a9-b12e-46867f80e010'
+  module:
+    - block_content
+  theme:
+    - tommiblog
+id: socialmediablockheader_2
+theme: tommiblog
+region: navigation
+weight: -6
+provider: null
+plugin: 'block_content:d796c067-67c6-43a9-b12e-46867f80e010'
+settings:
+  id: 'block_content:d796c067-67c6-43a9-b12e-46867f80e010'
+  label: 'Social media Block Header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
