@@ -4,16 +4,15 @@
     +clearfix
     .field--name-field-tags
       +clearfix
-      float: right
-      margin-top: -1.4em
-      margin-right: 0.8em
+      margin: 0.3em 0
       .field__item
         float: left
         +x-rem(font-size, 0.75)
         position: relative
         padding-left: 0.6em
         padding-right: 0
-        margin-left: 2em
+        margin-right: 1.5em
+        margin-left: 0.5em
         line-height: 20px
         a
           color: #777
@@ -94,12 +93,20 @@ body
       +clearfix
       .submitted 
         float: left
-      .field-node--field-tags 
-        float: right
-      .field-node--field-separator-dummy 
-        clear: both
+      .node__content
+        .field--name-field-tags
+          float: right
+          margin-top: -1.4em
+          margin-right: 0.8em
+          .field__item
+            margin-left: 2em
+            margin-right: 0
+        .field-node--field-tags
+          float: right
+        .field-node--field-separator-dummy
+          clear: both
 
-    .field-node--field-image 
+    .field-node--field-image
       clear: both
       float: left
       margin: 5px 15px 0 0

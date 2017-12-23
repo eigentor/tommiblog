@@ -22,7 +22,6 @@ body
     margin-right: 0
     float: left
     height: 28px
-    width: 70%
     padding: 2px 8px 2px 15px
 
   input.form-submit 
@@ -43,11 +42,9 @@ body
   margin: 0
   padding: 0
 #block-tommiblog-branding
-  float: right
-  width: 80%
-  text-align: center
-.region-header
   float: left
+  width: 70%
+  text-align: center
 .mobile-navigation
   padding-left: 6%
   padding-top: 5px
@@ -87,6 +84,7 @@ body
       background: #bbb
       color: #000
     input.form-submit
+      min-width: 2.2em
       background: #eaeaea url(../images/lupe-suche.png) no-repeat 5px center
       &:hover 
         background: #fff url(../images/lupe-suche.png) no-repeat 5px center
@@ -131,6 +129,8 @@ header
     @include border-radius(3px)
     float: right
     margin-top: 18px
+    margin-left: 10px
+    margin-right: 25px
   #block-tommiblog-main-menu
     ul
       margin-left: 0
@@ -220,6 +220,8 @@ body
 
 body
   +breakpoint($breakpoint-desktop)
+    .mobile-navigation
+      display: none!important
     .layout-container
       padding-bottom: 90px
       min-height: 100%
