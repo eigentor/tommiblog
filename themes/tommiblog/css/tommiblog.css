@@ -279,7 +279,7 @@ body {
   text-align: center; }
 
 .mobile-navigation {
-  padding-left: 6%;
+  padding-left: 5%;
   padding-top: 5px;
   float: left;
   width: 250px;
@@ -323,8 +323,6 @@ body {
         background: #fff url(../images/lupe-suche.png) no-repeat 5px center; }
 
 /* float all major containers left when the mobile menu is open */
-.mobile-menu-open header, .mobile-menu-open main, .mobile-menu-open footer[role=contentinfo] {
-  float: left; }
 .mobile-menu-open .mobile-navigation {
   display: block;
   position: absolute;
@@ -439,7 +437,8 @@ main {
     margin-top: 33px;
     margin-left: 15px; }
   body .mobile-navigation {
-    padding-top: 20px; } }
+    padding-top: 20px;
+    padding-left: 3%; } }
 
 /*------------------------------------------- */
 /*------------------------------------------- */
