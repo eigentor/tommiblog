@@ -262,7 +262,7 @@ body {
     border: 1px solid #777;
     width: 15%;
     float: left;
-    padding: 2px 5px;
+    padding: 2px 5px; 
     height: 28px;
     border-left: 0;
     background: #eee url(../images/lupe-suche.png) no-repeat 8px center; }
