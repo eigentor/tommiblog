@@ -1,7 +1,6 @@
 name: Tommiblog
 type: theme
-description: 'Tommiblog Theme'
-package: Core
+description: Tommiblog Theme
 base theme: classy
 version: VERSION
 core: 8.x

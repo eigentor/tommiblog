@@ -18,5 +18,7 @@ mobile-menu:
   js:
     js/tommiblog-custom.js: {}
   depencencies:
+    - core/drupal
     - core/jquery
     - core/jquery.once
+

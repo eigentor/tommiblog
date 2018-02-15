@@ -1,6 +1,6 @@
 (function ($) {
-  
-  $(document).ready(function(){
+  Drupal.behaviors.tommiblog = {
+    attach: function (context, settings) {
     
   // Open and close the main mobile menu
     $('#block-mobilemenuswitcher').click(function(){
@@ -13,6 +13,6 @@
     });
 
        
-  });  // end document.ready
-
+    } // end of attach function
+  };
 })(jQuery);
