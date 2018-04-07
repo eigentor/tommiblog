@@ -10,3 +10,4 @@ admin_compact_mode: false
 weight_select_max: 100
 langcode: de
 default_langcode: de
+mail_notification: ''
