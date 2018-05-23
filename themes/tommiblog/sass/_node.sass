@@ -76,7 +76,28 @@
       .field--name-body
         padding-top: 0.3em
           
-
+div#sliding-popup
+  background: transparent
+  .eu-cookie-compliance-banner
+    background: #666
+    padding-top: 0.5em
+    a
+      color: lighten($link-color, 30%)
+      &:hover
+        text-decoration: underline
+    p
+      font-weight: normal
+      line-height: 1.7
+    #popup-buttons
+      button
+        background: $link-color
+        text-shadow: none
+        border: none
+        box-shadow: none
+        color: white
+        margin-top: 0.7em
+        &:hover
+          background: lighten($link-color, 10%)
 
 
 /*-------------------------------------------*/

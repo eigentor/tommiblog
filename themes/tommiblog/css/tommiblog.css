@@ -262,7 +262,7 @@ body {
     border: 1px solid #777;
     width: 15%;
     float: left;
-    padding: 2px 5px; 
+    padding: 2px 5px;
     height: 28px;
     border-left: 0;
     background: #eee url(../images/lupe-suche.png) no-repeat 8px center; }
@@ -631,6 +631,28 @@ main {
     margin-bottom: 0; }
 .view-frontpage .node .node__content .field--name-body {
   padding-top: 0.3em; }
+
+div#sliding-popup {
+  background: transparent; }
+  div#sliding-popup .eu-cookie-compliance-banner {
+    background: #666;
+    padding-top: 0.5em; }
+    div#sliding-popup .eu-cookie-compliance-banner a {
+      color: #f67a7a; }
+      div#sliding-popup .eu-cookie-compliance-banner a:hover {
+        text-decoration: underline; }
+    div#sliding-popup .eu-cookie-compliance-banner p {
+      font-weight: normal;
+      line-height: 1.7; }
+    div#sliding-popup .eu-cookie-compliance-banner #popup-buttons button {
+      background: #CA0D0D;
+      text-shadow: none;
+      border: none;
+      box-shadow: none;
+      color: white;
+      margin-top: 0.7em; }
+      div#sliding-popup .eu-cookie-compliance-banner #popup-buttons button:hover {
+        background: #f01a1a; }
 
 /*------------------------------------------- */
 /*------------------------------------------- */
