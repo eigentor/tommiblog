@@ -1,7 +1,0 @@
-user: tommiblog
-pass: tommiblog
-print: 'Login mit tommiblog / tommiblog'
-allow_cli: true
-_core:
-  default_config_hash: NfapC3dpo1sgPOpAyD-rqMkL3OzOfjJyi8FIK0GWpW8
-langcode: de
